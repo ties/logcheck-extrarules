@@ -1,0 +1,3 @@
+#Avahi daemon is rot, geeft teveel logs en moet dus weg
+^\w{3} [ :0-9]{11} [._[:alnum:]-]+ avahi-daemon\[.+$
+
