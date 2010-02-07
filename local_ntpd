@@ -1,0 +1,6 @@
+#Lines zoals:
+#Feb  6 17:21:26 alias ntpd[1030]: clock is now synced
+#Feb  6 17:39:54 alias ntpd[1030]: clock is now unsynced
+^\w{3} [ :0-9]{11} [._[:alnum:]-]+ ntpd[[0-9]+]: clock is now synced$
+^\w{3} [ :0-9]{11} [._[:alnum:]-]+ ntpd[[0-9]+]: clock is now unsynced$
+
