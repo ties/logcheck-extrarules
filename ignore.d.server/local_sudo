@@ -2,3 +2,7 @@
 ^\w{3} [ :0-9]{11} [._[:alnum:]-]+ sudo:[[:space:]]+[_[:alnum:].-]+ : \(command continued\).*$
 ^\w{3} [ :0-9]{11} [._[:alnum:]-]+ sudo: pam_[[:alnum:]]+\(sudo:session\): session opened for user [[:alnum:]-]+ by ([[:alnum:]-]+)?\(uid=[0-9]+\)$
 ^\w{3} [ :0-9]{11} [._[:alnum:]-]+ sudo: pam_[[:alnum:]]+\(sudo:session\): session closed for user [[:alnum:]-]+$
+
+#Lines like:
+#Feb  7 20:38:40 alias sudo: pam_unix(sudo:auth): authentication failure; logname=ties uid=0 euid=0 tty=/dev/pts/3 ruser= rhost=  user=ties
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ sudo: pam_unix\(sudo:auth\): authentication failure; logname=[[:alnum:]]+ uid=[0-9]+ euid=[0-9]+ tty=[[:alnum:]/]+ ruser= rhost=  user=[[:alnum:]]+$
