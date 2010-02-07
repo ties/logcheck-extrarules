@@ -1,3 +1,0 @@
-^\w{3} [ :0-9]{11} [._[:alnum:]-]+ dhclient(-2.2.x)?: DHCP(NAK|ACK|OFFER) of [.0-9]{7,15} from [.0-9]{7,15}$
-^\w{3} [ :0-9]{11} [._[:alnum:]-]+ dhclient(-2.2.x)?: DHCP(REQUEST|RELEASE) of [.0-9]{7,15} on [[:alnum:].]+ to [.0-9]{7,15} port 67$
-
