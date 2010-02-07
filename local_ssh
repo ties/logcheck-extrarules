@@ -8,6 +8,14 @@
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ sshd\[[[:digit:]]+\]: error: PAM: Authentication failure for [^[:space:]]+ from ([:.[:xdigit:]]+|UNKNOWN|[-_.[:alnum:]]+)$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ sshd\[[[:digit:]]+\]: I(llegal|nvalid) user [^[:space:]]+ from ([:.[:xdigit:]]+|UNKNOWN)$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ sshd\[[[:digit:]]+\]: Failed (keyboard-interactive/pam|password|none) for (i(llegal|nvalid) user )?[^[:space:]]+ from ([:.[:xdigit:]]+|UNKNOWN|[-_.[:alnum:]]+) port [[:digit:]]{1,5} ssh2?$
-^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ sshd\[[[:digit:]]+\]: pam_unix\(sshd:auth\): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=[^[:space:]]+([[:space:]]+user=[^[:space:]]+)?$
+
+#Regels zoals:
+#Feb  7 00:56:59 sdk sshd[20857]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=sleepy.lib.virginia.edu  user=root
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ sshd\[[[:digit:]]+\]: (\(pam_unix\)|pam_unix\(sshd?:auth\):) authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=[^[:space:]]+([[:space:]]+user=[^[:space:]]+)?$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ sshd: pam_unix\(ssh:[[:alnum:]]+\): authentication failure; logname= uid=0 euid=0 tty= ruser= rhost=[-_.:[:alnum:]]+  user=[-_.[:alnum:]]+$
 ^\w{3} [ :0-9]{11} [._[:alnum:]-]+ sshd\[[0-9]+\]: fatal: recv_rexec_state: ssh_msg_recv failed$
+
+
+#En voor de volgende regels:
+Feb  7 00:57:02 sdk sshd[20859]: pam_unix(sshd:auth): check pass; user unknown
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ sshd: pam_unix\(ssh:[[:alnum:]]+\): check pass; user unknown$
