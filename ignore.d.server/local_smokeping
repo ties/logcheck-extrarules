@@ -1,0 +1,7 @@
+#Regels zoals:
+#Feb  6 16:59:17 alias smokeping[2906]: Smokeping version 2.003006 successfully launched.
+#Feb  6 16:59:17 alias smokeping[2906]: Not entering multiprocess mode for just a single probe.
+#Feb  6 16:59:17 alias smokeping[2906]: FPing: probing 3 targets with step 100 s and offset 10 s.
+^\w{3} [ :0-9]{11} [._[:alnum:]-]+ smokeping[[0-9]+]: Smokeping version [. 0-9]+ successfully launched.$
+^\w{3} [ :0-9]{11} [._[:alnum:]-]+ smokeping[[0-9]+]: Not entering multiproccess mode for just a single probe.$ 
+^\w{3} [ :0-9]{11} [._[:alnum:]-]+ smokeping[[0-9]+]: FPing: probing [0-9]+ targets with step [0-9]+ s and offset [0-9]+ s.$ 
