@@ -5,3 +5,6 @@
 ^\w{3} [ :0-9]{11} [._[:alnum:]-]+ smokeping[[0-9]+]: Smokeping version [. 0-9]+ successfully launched.$
 ^\w{3} [ :0-9]{11} [._[:alnum:]-]+ smokeping[[0-9]+]: Not entering multiproccess mode for just a single probe.$ 
 ^\w{3} [ :0-9]{11} [._[:alnum:]-]+ smokeping[[0-9]+]: FPing: probing [0-9]+ targets with step [0-9]+ s and offset [0-9]+ s.$ 
+^\w{3} [ :0-9]{11} [._[:alnum:]-]+ smokeping[[0-9]+]: Starting syslog logging$
+^\w{3} [ :0-9]{11} [._[:alnum:]-]+ smokeping[[0-9]+]: Note: logging to syslog as local[0-9]+/info$
+^\w{3} [ :0-9]{11} [._[:alnum:]-]+ smokeping[[0-9]+]: Daemonizing /usr/sbin/smokeping ...$
