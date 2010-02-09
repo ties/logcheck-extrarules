@@ -7,6 +7,7 @@
 ^\w{3} [ :0-9]{11} [._[:alnum:]-]+ avahi-daemon\[[0-9]+\]: Invalid query packet.$
 ^\w{3} [ :0-9]{11} [._[:alnum:]-]+ avahi-daemon\[[0-9]+\]: Invalid response packet from host [[:alnum:].]+$
 ^\w{3} [ :0-9]{11} [._[:alnum:]-]+ avahi-daemon\[[0-9]+\]: Received response from host [[:alnum:].]+ with invalid source port [0-9]+ on interface '[[:alnum:].]+'$
+^\w{3} [ :0-9]{11} [._[:alnum:]-]+ avahi-daemon\[[0-9]+\]: Registering new address record for [:0-9a-f]+ on [[:alnum:]]+\.\*.$
 #Remove like:
 #Feb  8 16:55:24 alias avahi-daemon[908]: Received response from host 130.89.164.246 with invalid source port 52031 on interface 'eth0.0'
 #Feb  8 16:55:23 alias avahi-daemon[908]: Invalid legacy unicast query packet.
