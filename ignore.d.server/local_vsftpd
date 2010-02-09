@@ -1,0 +1,2 @@
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ vsftpd: pam_unix\(vsftpd:auth\): authentication failure; logname= uid=[0-9]+ euid=[0-9]+ tty=ftp ruser=[[:alnum:]]+ rhost=[[:alnum:].]+$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ vsftpd: pam_unix\(vsftpd:auth\): check pass; user unknown$
