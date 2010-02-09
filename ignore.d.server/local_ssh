@@ -17,4 +17,4 @@
 ^\w{3} [ :0-9]{11} [._[:alnum:]-]+ sshd\[[0-9]+\]: Received disconnect from [[:alnum:].]+: 11: Closed due to user request.$
 #En voor de volgende regels:
 Feb  7 00:57:02 sdk sshd[20859]: pam_unix(sshd:auth): check pass; user unknown
-^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ sshd\[[0-9]+\]: pam_unix\(ssh:[[:alnum:]]+\): check pass; user unknown$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ sshd\[[0-9]+\]: pam_unix\(sshd:auth\): check pass; user unknown$
