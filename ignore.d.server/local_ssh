@@ -1,14 +1,3 @@
-^\w{3} [ :0-9]{11} [._[:alnum:]-]+ sshd\[[0-9]+\]: warning: /etc/hosts\.(allow|deny), line [0-9]+: can't verify hostname: getaddrinfo\([._[:alnum:]-]+, AF_INET\) failed$
-^\w{3} [ :0-9]{11} [._[:alnum:]-]+ sshd\[[0-9]+\]: warning: /etc/hosts\.(allow|deny), line [0-9]+: host name/(name|address) mismatch: [._[:alnum:]-]+ != [._[:alnum:]-]+$
-^\w{3} [ :0-9]{11} [._[:alnum:]-]+ sshd\[[0-9]+\]: reverse mapping checking getaddrinfo for [._[:alnum:]-]+ (\[[:.[:xdigit:]]+\] )?failed - POSSIBLE BREAK-?IN ATTEMPT!$
-^\w{3} [ :0-9]{11} [._[:alnum:]-]+ sshd\[[0-9]+\]: Address [._[:alnum:]-]+ maps to [._[:alnum:]-]+, but this does not map back to the address - POSSIBLE BREAK-?IN ATTEMPT!$
-^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ sshd\[[[:digit:]]+\]: fatal: Write failed: Broken pipe$
-^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ sshd\[[[:digit:]]+\]: fatal: Write failed: Connection (timed out|reset by peer)$
-^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ sshd\[[[:digit:]]+\]: error: PAM: User not known to the underlying authentication module for i(llegal|nvalid) user [^[:space:]]+ from ([:.[:xdigit:]]+|UNKNOWN|[-_.[:alnum:]]+)$
-^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ sshd\[[[:digit:]]+\]: error: PAM: Authentication failure for [^[:space:]]+ from ([:.[:xdigit:]]+|UNKNOWN|[-_.[:alnum:]]+)$
-^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ sshd\[[[:digit:]]+\]: I(llegal|nvalid) user [^[:space:]]+ from ([:.[:xdigit:]]+|UNKNOWN)$
-^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ sshd\[[[:digit:]]+\]: Failed (keyboard-interactive/pam|password|none) for (i(llegal|nvalid) user )?[^[:space:]]+ from ([:.[:xdigit:]]+|UNKNOWN|[-_.[:alnum:]]+) port [[:digit:]]{1,5} ssh2?$
-
 #Regels zoals:
 #Feb  7 00:56:59 sdk sshd[20857]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=sleepy.lib.virginia.edu  user=root
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ sshd\[[[:digit:]]+\]: (\(pam_unix\)|pam_unix\(sshd?:auth\):) authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=[^[:space:]]+([[:space:]]+user=[^[:space:]]+)?$
@@ -18,3 +7,6 @@
 #En voor de volgende regels:
 Feb  7 00:57:02 sdk sshd[20859]: pam_unix(sshd:auth): check pass; user unknown
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ sshd\[[0-9]+\]: pam_unix\(sshd:auth\): check pass; user unknown$
+#Regels zoals:
+#Feb 17 08:54:03 vlweb01 sshd[8973]: PAM 1 more authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=218.200.163.149  user=root
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ sshd\[[0-9]+\]: PAM [0-9]+ more authentication failure(s)?; logname= uid=0 euid=0 tty=ssh ruser= rhost=[[:alnum:].]+  user=[a-Z]+$
