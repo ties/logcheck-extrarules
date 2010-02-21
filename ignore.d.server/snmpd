@@ -1,0 +1,2 @@
+#Ignore UDP connects to public community on localhost
+^\w{3} [ :0-9]{11} [._[:alnum:]-]+ snmpd\[[0-9]+\]: Connection from UDP: \[127.0.0.1\]->\[127.0.0.1\]:-[0-9]+$
