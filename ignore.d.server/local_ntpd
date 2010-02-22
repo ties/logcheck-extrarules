@@ -3,4 +3,5 @@
 #Feb  6 17:39:54 alias ntpd[1030]: clock is now unsynced
 ^\w{3} [ :0-9]{11} [._[:alnum:]-]+ ntpd[[0-9]+]: clock is now synced$
 ^\w{3} [ :0-9]{11} [._[:alnum:]-]+ ntpd[[0-9]+]: clock is now unsynced$
-
+#Allow NTPD to make small adjustments to the local clock without spam
+^\w{3} [ :0-9]{11} [._[:alnum:]-]+ ntpd[[0-9]+]: adjusting local clock by (-)?0.[0-9]+s$
