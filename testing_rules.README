@@ -1,1 +1,4 @@
+Use the following line to test the logcheck regular expressions.
+Relevant logfiles (which logcheck checks) are /var/log/auth.log and /var/log/syslog
+
 sed -e 's/[[:space:]]*$//' /var/log/syslog | egrep     ''
