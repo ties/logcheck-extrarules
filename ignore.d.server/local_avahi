@@ -13,3 +13,4 @@
 #Feb  8 16:55:23 alias avahi-daemon[908]: Invalid legacy unicast query packet.
 ^\w{3} [ :0-9]{11} [._[:alnum:]-]+ avahi-daemon\[[0-9]+\]: Invalid legacy unicast query packet.$
 ^\w{3} [ :0-9]{11} [._[:alnum:]-]+ avahi-daemon\[[0-9]+\]: Received response with invalid source port [0-9]+ on interface '[[:alnum:].]+'$
+^\w{3} [ :0-9]{11} [._[:alnum:]-]+ avahi-daemon\[[0-9]+\]: Invalid response packet.$
