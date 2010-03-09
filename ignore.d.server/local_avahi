@@ -5,7 +5,7 @@
 #Note that the next rule is ugly, but i'm not sure how to filter it otherwise (except stopping rsyslog from summaryzing)
 ^\w{3} [ :0-9]{11} [._[:alnum:]-]+ avahi-daemon\[[0-9]+\]: last message repeated [0-9]+ time(s)?$
 ^\w{3} [ :0-9]{11} [._[:alnum:]-]+ avahi-daemon\[[0-9]+\]: Invalid query packet.$
-^\w{3} [ :0-9]{11} [._[:alnum:]-]+ avahi-daemon\[[0-9]+\]: Invalid response packet from host [[:alnum:].]+$
+^\w{3} [ :0-9]{11} [._[:alnum:]-]+ avahi-daemon\[[0-9]+\]: Invalid response packet from host [[:alnum:]:.]+.$
 ^\w{3} [ :0-9]{11} [._[:alnum:]-]+ avahi-daemon\[[0-9]+\]: Received response from host [[:alnum:].]+ with invalid source port [0-9]+ on interface '[[:alnum:]:.]+'$
 ^\w{3} [ :0-9]{11} [._[:alnum:]-]+ avahi-daemon\[[0-9]+\]: Registering new address record for [:0-9a-f]+ on [[:alnum:]]+\.\*.$
 #Remove like:
