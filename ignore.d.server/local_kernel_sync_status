@@ -1,0 +1,4 @@
+
+#Lines like:
+#kernel time sync status change 4001
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ ntpd\[[0-9]+\]: kernel time sync status change [0-9]{4}$
