@@ -1,3 +1,5 @@
 #Regels zoals:
 #Apr  5 00:03:30 sdk kernel: [5048222.885780] martian source 255.255.255.255 from 130.89.167.153, on dev eth0
 ^\w{3} [ :0-9]{11} [._[:alnum:]-]+ kernel: \[[.[:xdigit:]]+\] martian source [.:[:xdigit:]]+ from [.:[:xdigit:]]+, on dev [[:alnum:]]+$
+^\w{3} [ :0-9]{11} [._[:alnum:]-]+ kernel: \[[.[:xdigit:]]+\] martian destination [.:[:xdigit:]]+ from [.:[:xdigit:]]+, dev [[:alnum:]]+$
+#Apr  5 13:33:47 sdk kernel: [5096840.184841] martian destination 0.0.0.0 from 130.89.172.164, dev eth0
