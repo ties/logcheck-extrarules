@@ -1,0 +1,3 @@
+#Regels zoals:
+#Apr 11 15:17:30 sdk kernel: [5621462.892202] __ratelimit: 242 callbacks suppressed
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ kernel: \[[0-9.]+\] __ratelimit: [0-9]+ callbacks suppressed$
