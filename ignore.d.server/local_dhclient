@@ -4,3 +4,5 @@
 #Lines zoals:
 #Apr 11 09:42:33 sdk dhclient: parse_option_buffer: malformed option dhcp.finger-server (code 73): option length exceeds option buffer length.
 ^\w{3} [ :0-9]{11} [._[:alnum:]-]+ dhclient(-2.2.x)?: parse_option_buffer: malformed option dhcp.finger-server \(code 73\): option length exceeds option buffer length.$
+#en Apr 19 18:14:40 sdk dhclient: parse_option_buffer: malformed option dhcp.netinfo-server-address (code 112): option length exceeds option buffer length.
+^\w{3} [ :0-9]{11} [._[:alnum:]-]+ dhclient(-2.2.x)?: parse_option_buffer: malformed option dhcp.netinfo-server-address \(code 112\): option length exceeds option buffer length.$
