@@ -1,0 +1,3 @@
+#En voor de volgende regels:
+#Apr 17 22:51:39 xalias kernel: [6167129.505687] Neighbour table overflow.
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ kernel: \[[.0-9]+\] Neighbour table overflow.$
