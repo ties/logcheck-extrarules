@@ -12,4 +12,7 @@
 #Apr 22 11:28:37 xalias dhclient: parse_option_buffer: malformed option dhcp.<unknown> (code 111): option length exceeds option buffer length.
 ^\w{3} [ :0-9]{11} [._[:alnum:]-]+ dhclient(-2.2.x)?: parse_option_buffer: malformed option dhcp.<unknown> \(code 115\): option length exceeds option buffer length.$
 ^\w{3} [ :0-9]{11} [._[:alnum:]-]+ dhclient(-2.2.x)?: parse_option_buffer: malformed option dhcp.user-class \(code 77\): option length exceeds option buffer length.$
-^\w{3} [ :0-9]{11} [._[:alnum:]-]+ dhclient(-2.2.x)?: parse_option_buffer: malformed option dhcp.<unknown> \(code 111\): option length exceeds option buffer length.$ 
+^\w{3} [ :0-9]{11} [._[:alnum:]-]+ dhclient(-2.2.x)?: parse_option_buffer: malformed option dhcp.<unknown> \(code 111\): option length exceeds option buffer length.$
+^\w{3} [ :0-9]{11} [._[:alnum:]-]+ dhclient(-2.2.x)?: parse_option_buffer: malformed option dhcp.pop-server \(code 70\): option length exceeds option buffer length.$
+#Catchall;
+^\w{3} [ :0-9]{11} [._[:alnum:]-]+ dhclient(-2.2.x)?: parse_option_buffer: malformed option [[:alnum:]\.<>]+ \(code [0-9]+\): option length exceeds option buffer length.$
