@@ -1,5 +1,5 @@
 #Shorewall logs are (generally) not interesting;
 #filter: Mar 17 21:38:56 vlweb01 kernel: [12064914.538030] Shorewall:net2fw:DROP:IN=eth0 OUT= MAC=00:26:b9:3f:47:b1:00:0b:60:aa:80:00:08:00 SRC=130.89.166.220 DST=130.89.1.227 LEN=60 TOS=0x00 PREC=0x00 TTL=63 ID=52209 DF PROTO=TCP SPT=50651 DPT=389 WINDOW=5840 RES=0x00 CWR ECE SYN URGP=0
-^\w{3} [ :0-9]{11} [._[:alnum:]-]+ kernel: \[[0-9.]+\] Shorewall:net2fw:.*$
 ^\w{3} [ :0-9]{11} [._[:alnum:]-]+ kernel: \[[0-9.]+\] Shorewall:logflags:.*$
 ^\w{3} [ :0-9]{11} [._[:alnum:]-]+ kernel: \[[0-9.]+\] Shorewall:[a-z]+2fw:.*$
+^\w{3} [ :0-9]{11} [._[:alnum:]-]+ kernel: \[[0-9.]+\] Shorewall:smurfs:.*$
