@@ -9,3 +9,4 @@
 ^\w{3} [ :0-9]{11} [._[:alnum:]-]+ ntpd[[0-9]+]: peer [[:alnum:]:\.]{7,30} now (valid|invalid)$
 ^\w{3} [ :0-9]{11} [._[:alnum:]-]+ ntpd[[0-9]+]: reply from [0-9.]{7,15}: not synced, next query [0-9]+s$
 ^\w{3} [ :0-9]{11} [._[:alnum:]-]+ ntpd[[0-9]+]: sendto: Network is unreachable$
+^\w{3} [ :0-9]{11} [._[:alnum:]-]+ ntpd[[0-9]+]: peers refreshed$
