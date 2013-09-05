@@ -1,0 +1,3 @@
+# Lines like
+#Aug  5 05:05:50 vlweb1 Server Administrator: Storage Service EventID: 2095  Unexpected sense. SCSI sense data: Sense key:  5 Sense code: 24 Sense qualifier:  0:  Physical Disk 0:0:3 Controller 0, Connector 0
+^\w{3} [ :0-9]{11} [._[:alnum:]-]+ Server Administrator: Storage Service EventID: 2095  Unexpected sense. SCSI sense data: Sense key:  5 Sense code: 24 Sense qualifier:  0:  Physical Disk [0-9:]+ Controller 0, Connector [0-9]+$
