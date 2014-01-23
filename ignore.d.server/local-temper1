@@ -1,0 +1,18 @@
+#
+# The initialization of the temper device by temper1 program sometimes fails
+# these rules ignore messages like;
+#
+# Apr 24 09:20:12 xalias kernel: [12666373.619668] usb 8-2: usbfs: interface 0 claimed by usbfs while 'temper1' sets config #1
+# Apr 24 09:20:12 xalias kernel: [12666373.619689] temper1[32089]: segfault at 8 ip 000000000040248d sp 00007fff889f82e0 error 4
+# Apr 24 09:20:12 xalias kernel: [12666373.619788] usb 8-2: usbfs: process 32087 (temper1) did not claim interface 1 before use
+# Apr 24 09:20:12 xalias kernel: [12666373.619810]  in temper1[400000+4000]
+#
+^\w{3} [ :0-9]{11} [._[:alnum:]-]+ kernel: \[[ 0-9.]+\] usb [[:digit:]-]{2,4}: usbfs: interface [[:digit:]]+ claimed by usbfs while 'temper1' sets config #1$
+^\w{3} [ :0-9]{11} [._[:alnum:]-]+ kernel: \[[ 0-9.]+\] usb [[:digit:]-]{2,4}: usbfs: process [[:digit:]]+ \(temper1\) did not claim interface [[:digit:]]+ before use$
+^\w{3} [ :0-9]{11} [._[:alnum:]-]+ kernel: \[[ 0-9.]+\] temper1\[[[:digit:]]+\]: segfault at 8 ip [[:alnum:]]+ sp [[:alnum:]]+ error [[:digit:]]$
+^\w{3} [ :0-9]{11} [._[:alnum:]-]+ kernel: \[[ 0-9.]+\]  in temper1\[400000\+4000\]$
+# single-line variation of the above
+^\w{3} [ :0-9]{11} [._[:alnum:]-]+ kernel: \[[ 0-9.]+\] temper1\[[[:digit:]]+\]: segfault at 8 ip [[:alnum:]]+ sp [[:alnum:]]+ error [[:digit:]] in temper1\[400000\+4000\]$
+# Apr 24 09:20:12 xalias kernel: [12666373.619689] temper1[32089]: segfault at 8 ip 000000000040248d sp 00007fff889f82e0 error 4
+# Apr 24 09:20:12 xalias kernel: [12666373.619810]  in temper1[400000+4000]
+# Sep 5 12:05:12 xalias kernel: [1035621.811024] temper1[18053]: segfault at 8 ip 000000000040248d sp 00007fff3c69f3a0 error 4 in temper1[400000+4000]

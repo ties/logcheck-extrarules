@@ -1,0 +1,2 @@
+# Apr 23 06:40:30 xalias kernel: [12570426.434884] init: Connection from private client
+^\w{3} [ :0-9]{11} [._[:alnum:]-]+ kernel: \[[ 0-9.]+\] init: Connection from private client$

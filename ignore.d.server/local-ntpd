@@ -6,6 +6,11 @@
 #Allow NTPD to make small adjustments to the local clock without spam
 ^\w{3} [ :0-9]{11} [._[:alnum:]-]+ ntpd[[0-9]+]: adjusting local clock by (-)?[0-9].[0-9]+s$
 ^\w{3} [ :0-9]{11} [._[:alnum:]-]+ ntpd[[0-9]+]: skew change (-)?[0-9]+.[0-9]+ exceeds limit$
-^\w{3} [ :0-9]{11} [._[:alnum:]-]+ ntpd[[0-9]+]: peer [[:alnum:]:\.]{7,30} now (valid|invalid)$
+^\w{3} [ :0-9]{11} [._[:alnum:]-]+ ntpd[[0-9]+]: peer [[:alnum:]:\.]{7,39} now (valid|invalid)$
 ^\w{3} [ :0-9]{11} [._[:alnum:]-]+ ntpd[[0-9]+]: reply from [0-9.]{7,15}: not synced, next query [0-9]+s$
 ^\w{3} [ :0-9]{11} [._[:alnum:]-]+ ntpd[[0-9]+]: sendto: Network is unreachable$
+^\w{3} [ :0-9]{11} [._[:alnum:]-]+ ntpd[[0-9]+]: peers refreshed$
+^\w{3} [ :0-9]{11} [._[:alnum:]-]+ ntpd[[0-9]+]: new interface\(s\) found: waking up resolver$
+^\w{3} [ :0-9]{11} [._[:alnum:]-]+ ntpd[[0-9]+]: Listen normally on [0-9]+ (eth|br)[0-9]+ [[:alnum:]:\.]{7,39} UDP [0-9]+$
+^\w{3} [ :0-9]{11} [._[:alnum:]-]+ ntpd[[0-9]+]: [[:alnum:]:\.]{7,39} interface [[:alnum:]:\.]{7,39} -> [[:alnum:]:\.]{7,39}$
+^\w{3} [ :0-9]{11} [._[:alnum:]-]+ ntpd[[0-9]+]: Deleting interface \#[0-9]+ [[:alnum:]]{3,4}, [[:alnum:]:\.]{7,39}#[0-9]+, interface stats: received=[0-9]+, sent=[0-9=}, dropped=[0-9]+, active_time=[0-9]+ secs$
