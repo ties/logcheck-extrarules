@@ -25,6 +25,6 @@ Feb  7 00:57:02 sdk sshd[20859]: pam_unix(sshd:auth): check pass; user unknown
 #Regels zoals:
 #Feb 17 08:54:03 vlweb01 sshd[8973]: PAM 1 more authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=218.200.163.149  user=root
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ sshd\[[0-9]+\]: PAM [0-9]+ more authentication failure(s)?; logname= uid=0 euid=0 tty=ssh ruser= rhost=[[:alnum:]\.:]+  user=[a-Z]+$
-# Repeated messages;
-^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ sshd\[[0-9]+\]: last message repeated [0-9]+ times$
-^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ sshd\[[0-9]+\]: subsystem request for sftp by user [-._[:alnum:]]+$
+# Repeated messages; include a variety with empty hostname (i.e. two spaces)
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]? sshd\[[0-9]+\]: last message repeated [0-9]+ times$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ sshd\[[0-9]+\]: subsystemes request for sftp by user [-._[:alnum:]]+$
