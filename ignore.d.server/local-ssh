@@ -18,7 +18,6 @@
 ^\w{3} [ :0-9]{11} [._[:alnum:]-]+ sshd\[[0-9]+\]: Received disconnect from [[:alnum:].:]+: 11: logout \[preauth\]$
 ^\w{3} [ :0-9]{11} [._[:alnum:]-]+ sshd\[[0-9]+\]: Connection closed by [[:alnum:].:]+ \[preauth\]$
 ^\w{3} [ :0-9]{11} [._[:alnum:]-]+ sshd\[[0-9]+\]: Disconnecting: Too many authentication failures for [[:alnum:]]+ \[preauth\]$
-Feb  7 00:57:02 sdk sshd[20859]: pam_unix(sshd:auth): check pass; user unknown
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ sshd\[[0-9]+\]: pam_unix\(sshd:auth\): check pass; user unknown$
 # double space before user=...
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ sshd\[[0-9]+\]: PAM [0-9]+ more authentication failure(s)?\; logname= uid=0 euid=0 tty=ssh ruser= rhost=[[:alnum:]\.:]+\s+user=[a-Z]+\s*$
