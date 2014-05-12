@@ -7,6 +7,6 @@ Relevant logfiles (which logcheck checks) are /var/log/auth.log and /var/log/sys
 
 `sed -e 's/[[:space:]]*$//' /var/log/syslog | egrep     ''`
 
-The documentation at [bluelightav.org](<http://wiki.bluelightav.org/display/BLUE/How+to+administer+logcheck) uses a different method. The regex is stored in a file to prevent possible mangling by the shell;
+The documentation at [bluelightav.org](http://wiki.bluelightav.org/display/BLUE/Logcheck+administration) uses a different method. The regex is stored in a file to prevent possible mangling by the shell;
   * save the regex in `[file]`
   * `egrep --file [file] /var/log/syslog`
