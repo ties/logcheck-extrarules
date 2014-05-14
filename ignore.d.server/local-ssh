@@ -19,9 +19,7 @@
 ^\w{3} [ :0-9]{11} [._[:alnum:]-]+ sshd\[[0-9]+\]: Connection closed by [[:alnum:].:]+ \[preauth\]$
 ^\w{3} [ :0-9]{11} [._[:alnum:]-]+ sshd\[[0-9]+\]: Disconnecting: Too many authentication failures for [[:alnum:]]+ \[preauth\]$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ sshd\[[0-9]+\]: pam_unix\(sshd:auth\): check pass; user unknown$
-# double space before user=...
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ sshd\[[0-9]+\]: PAM [0-9]+ more authentication failure(s)?; logname= uid=0 euid=0 tty=ssh ruser= rhost=[[:alnum:]\.:]+(\s+user=[a-Z]+)?$
-# Repeated messages; include a variety with empty hostname (i.e. two spaces)
 ^\w{3} [ :[:digit:]]{11} ([._[:alnum:]-]+)? sshd\[[0-9]+\]: last message repeated [0-9]+ times$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ sshd\[[0-9]+\]: subsystem(s)? request for sftp by user [-._[:alnum:]]+$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ sshd\[[0-9]+\]: PAM service\(sshd\) ignoring max retries; [0-9]{1,2} > [0-9]$
