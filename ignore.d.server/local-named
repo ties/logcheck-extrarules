@@ -1,1 +1,2 @@
 \w{3} [ :0-9]{11} [._[:alnum:]-]+ named\[[0-9]+\]:[[:blank:]]+validating [@[:alnum:]-]+: [._[:alnum:]-]+ [._[:alnum:]-]+: no valid signature found$
+\w{3} [ :0-9]{11} [._[:alnum:]-]+ named\[[0-9]+\]: DNS format error from [._[:alnum:]-]+#[ :0-9]+ resolving [._[:alnum:]-]+\/[._[:alnum:]-]+ for client [._[:alnum:]-]+#[ :0-9]+: invalid response$
