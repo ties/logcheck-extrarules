@@ -9,4 +9,4 @@
 ^\w{3} [ :0-9]{11} [._[:alnum:]-]+ puppet-agent\[[0-9]+\]: Applying configuration version '[0-9]+'$
 ^\w{3} [ :0-9]{11} [._[:alnum:]-]+ puppet-agent\[[0-9]+\]: Computing checksum on file [._\/[:alnum:]-]+$
 ^\w{3} [ :0-9]{11} [._[:alnum:]-]+ puppet-agent\[[0-9]+\]: \(\/Stage\[main]\/[_:[:alnum:]-]+\/File\[[._\/[:alnum:]-]+]\/content\) content changed '{[[:alnum:]-]+}[[:alnum:]-]+' to '{[[:alnum:]-]+}[[:alnum:]-]+'$
-^\w{3} [ :0-9]{11} [._[:alnum:]-]+ puppet-agent\[[0-9]+\]: \(\/Stage\[main]\/[_:[:alnum:]-]+\/File\[[._\/[:alnum:]-]+]\) Filebucketed [._\/[:alnum:]-]+ to [._[:alnum:]-]+$ with sum [[:alnum:]-]+$
+^\w{3} [ :0-9]{11} [._[:alnum:]-]+ puppet-agent\[[0-9]+\]: \(\/Stage\[main]\/[_:[:alnum:]-]+\/File\[[._\/[:alnum:]-]+]\) Filebucketed [._\/[:alnum:]-]+ to [._[:alnum:]-]+ with sum [[:alnum:]-]+$
