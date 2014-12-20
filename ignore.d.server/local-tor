@@ -1,0 +1,1 @@
+^\w{3} [ :0-9]{11} [._[:alnum:]-]+ Tor\[[0-9]+\]: Closing stream for '\[scrubbed]\.onion': hidden service is unavailable \(try again later\)\.$

@@ -1,0 +1,1 @@
+\w{3} [ :0-9]{11} [._[:alnum:]-]+ named\[[0-9]+\]: validating [@[:alnum:]-]+: [._[:alnum:]-]+ [._[:alnum:]-]+: no valid signature found$
