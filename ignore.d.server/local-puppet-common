@@ -2,6 +2,7 @@
 ^\w{3} [ :0-9]{11} [._[:alnum:]-]+ puppet-master\[[0-9]+\]: Compiled catalog for [._[:alnum:]-]+ in environment [._[:alnum:]-]+ in [.[:digit:]]+ seconds$
 
 # Puppet Agent
+^\w{3} [ :0-9]{11} [._[:alnum:]-]+ puppet-agent\[[0-9]+\]: Not sending tagmail report; no changes$
 ^\w{3} [ :0-9]{11} [._[:alnum:]-]+ puppet-agent\[[0-9]+\]: Retrieving pluginfacts$
 ^\w{3} [ :0-9]{11} [._[:alnum:]-]+ puppet-agent\[[0-9]+\]: Retrieving plugin$
 ^\w{3} [ :0-9]{11} [._[:alnum:]-]+ puppet-agent\[[0-9]+\]: Loading facts$
