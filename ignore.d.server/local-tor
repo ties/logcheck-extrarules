@@ -1,1 +1,4 @@
 ^\w{3} [ :0-9]{11} [._[:alnum:]-]+ Tor\[[0-9]+\]: Closing stream for '\[scrubbed]\.onion': hidden service is unavailable \(try again later\)\.$
+^\w{3} [ :0-9]{11} [._[:alnum:]-]+ Tor\[[0-9]+\]: Average packaged cell fullness: [.[:digit:]]+%$
+^\w{3} [ :0-9]{11} [._[:alnum:]-]+ Tor\[[0-9]+\]: TLS write overhead: [.[:digit:]]+%$
+^\w{3} [ :0-9]{11} [._[:alnum:]-]+ Tor\[[0-9]+\]: Heartbeat: Tor's uptime is [0-9]+ days [:[:digit:]]+ hours, with [0-9]+ circuits open\. I've sent [.[:digit:]]+ MB and received [.[:digit:]]+ MB\.$
