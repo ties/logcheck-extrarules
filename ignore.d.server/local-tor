@@ -2,3 +2,6 @@
 ^\w{3} [ :0-9]{11} [._[:alnum:]-]+ Tor\[[0-9]+\]: Average packaged cell fullness: [.[:digit:]]+%$
 ^\w{3} [ :0-9]{11} [._[:alnum:]-]+ Tor\[[0-9]+\]: TLS write overhead: [.[:digit:]]+%$
 ^\w{3} [ :0-9]{11} [._[:alnum:]-]+ Tor\[[0-9]+\]: Heartbeat: Tor's uptime is [0-9]+ days [:[:digit:]]+ hours, with [0-9]+ circuits open\. I've sent [.[:digit:]]+ MB and received [.[:digit:]]+ MB\.$
+^\w{3} [ :0-9]{11} [._[:alnum:]-]+ Tor\[[0-9]+\]: circuit_finish_handshake failed\.$
+^\w{3} [ :0-9]{11} [._[:alnum:]-]+ Tor\[[0-9]+\]: connection_edge_process_relay_cell \(at origin\) failed\.$
+^\w{3} [ :0-9]{11} [._[:alnum:]-]+ Tor\[[0-9]+\]: onion_skin_client_handshake failed\.$
