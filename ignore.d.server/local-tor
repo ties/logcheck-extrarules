@@ -5,3 +5,4 @@
 ^\w{3} [ :0-9]{11} [._[:alnum:]-]+ Tor\[[0-9]+\]: circuit_finish_handshake failed\.$
 ^\w{3} [ :0-9]{11} [._[:alnum:]-]+ Tor\[[0-9]+\]: connection_edge_process_relay_cell \(at origin\) failed\.$
 ^\w{3} [ :0-9]{11} [._[:alnum:]-]+ Tor\[[0-9]+\]: onion_skin_client_handshake failed\.$
+^\w{3} [ :0-9]{11} [._[:alnum:]-]+ Tor\[[0-9]+\]: Heartbeat: Tor's uptime is [:0-9]+ hours, with [0-9]+ circuits open\. I've sent [.0-9]+ MB and received [.0-9]+ MB\.$
