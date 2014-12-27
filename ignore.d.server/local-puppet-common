@@ -12,3 +12,4 @@
 ^\w{3} [ :0-9]{11} [._[:alnum:]-]+ puppet-agent\[[0-9]+\]: \(\/Stage\[main]\/[_:[:alnum:]-]+\/File\[[._\/[:alnum:]-]+]\/content\) content changed '{[[:alnum:]-]+}[[:alnum:]-]+' to '{[[:alnum:]-]+}[[:alnum:]-]+'$
 ^\w{3} [ :0-9]{11} [._[:alnum:]-]+ puppet-agent\[[0-9]+\]: \(\/Stage\[main]\/[_:[:alnum:]-]+\/File\[[._\/[:alnum:]-]+]\) Filebucketed [._\/[:alnum:]-]+ to [._[:alnum:]-]+ with sum [[:alnum:]-]+$
 ^\w{3} [ :0-9]{11} [._[:alnum:]-]+ puppet-agent\[[0-9]+\]: Not sending tagmail report; no changes$
+^\w{3} [ :0-9]{11} [._[:alnum:]-]+ puppet-agent\[[0-9]+\]: Finished catalog run in [._[:alnum:]-]+ seconds$
