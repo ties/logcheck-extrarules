@@ -1,5 +1,6 @@
 # Puppet Master
 ^\w{3} [ :0-9]{11} [._[:alnum:]-]+ puppet-master\[[0-9]+\]: Compiled catalog for [._[:alnum:]-]+ in environment [._[:alnum:]-]+ in [.[:digit:]]+ seconds$
+^\w{3} [ :0-9]{11} [._[:alnum:]-]+ puppet-master\[[0-9]+\]: Not sending tagmail report; no changes$
 
 # Puppet Agent
 ^\w{3} [ :0-9]{11} [._[:alnum:]-]+ puppet-agent\[[0-9]+\]: Not sending tagmail report; no changes$
