@@ -29,3 +29,5 @@
 # 2014-08: 'Corrupted mac on input', PECL ssh2
 ^\w{3} [ :0-9]{11} [._[:alnum:]-]+ sshd\[[0-9]+\]: Corrupted MAC on input\. \[preauth\]$
 ^\w{3} [ :0-9]{11} [._[:alnum:]-]+ sshd\[[0-9]+\]: Received disconnect from [[:alnum:].:]+: 11: PECL/ssh2 \(http://pecl\.php\.net/packages/ssh2\) \[preauth\]$
+# 2014-12-30: filter more [preauth] messages
+^\w{3} [ :0-9]{11} [._[:alnum:]-]+ sshd\[[0-9]+\]: Received disconnect from [[:alnum:].:]+: 11: ok \[preauth\]$
