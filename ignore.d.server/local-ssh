@@ -24,6 +24,7 @@
 ^\w{3} [ :[:digit:]]{11} ([._[:alnum:]-]+)? sshd\[[0-9]+\]: last message repeated [0-9]+ times$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ sshd\[[0-9]+\]: subsystem(s)? request for sftp by user [-._[:alnum:]]+$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ sshd\[[0-9]+\]: PAM service\(sshd\) ignoring max retries; [0-9]{1,2} > [0-9]$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ sshd\[[0-9]+\]: message repeated [0-9] times: [ Failed password for [[:alnum:]]+ from [0-9\.]{7,15} port [0-9]+ ssh2]$
 ^\w{3} [ :0-9]{11} [._[:alnum:]-]+ sshd\[[0-9]+\]: error: Received disconnect from [[:alnum:].:]+: 3: com.jcraft.jsch.JSchException: Auth fail \[preauth\]$
 # 2014-08: 'Corrupted mac on input', PECL ssh2
 ^\w{3} [ :0-9]{11} [._[:alnum:]-]+ sshd\[[0-9]+\]: Corrupted MAC on input\. \[preauth\]$
@@ -32,3 +33,5 @@
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ sshd\[[[:digit:]]+\]: Disconnecting: bad client public DH value \[preauth\]$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ sshd\[[[:digit:]]+\]: Disconnecting: Change of username or service not allowed: \([[:alpha:]]+,ssh-connection\) -> \([[:alpha:]]+,ssh-connection\) \[preauth\]$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ sshd\[[[:digit:]]+\]: invalid public DH value: <= 1 \[preauth\]$
+# 2014-12-30: filter more [preauth] messages
+^\w{3} [ :0-9]{11} [._[:alnum:]-]+ sshd\[[0-9]+\]: Received disconnect from [[:alnum:].:]+: 11: ok \[preauth\]$

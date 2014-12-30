@@ -1,19 +1,10 @@
-^\w{3} [ :0-9]{11} [._[:alnum:]-]+ dhclient(-2.2.x)?: DHCP(NAK|ACK|OFFER) of [.0-9]{7,15} from [.0-9]{7,15}$
-^\w{3} [ :0-9]{11} [._[:alnum:]-]+ dhclient(-2.2.x)?: DHCP(REQUEST|RELEASE) of [.0-9]{7,15} on [[:alnum:].]+ to [.0-9]{7,15} port 67$
-^\w{3} [ :0-9]{11} [._[:alnum:]-]+ dhclient(-2.2.x)?: last message repeated [0-9]+ times$
-^\w{3} [ :0-9]{11}\s+dhclient(-2.2.x)?: last message repeated [0-9]+ times$
-#Lines zoals:
-#Apr 11 09:42:33 sdk dhclient: parse_option_buffer: malformed option dhcp.finger-server (code 73): option length exceeds option buffer length.
-^\w{3} [ :0-9]{11} [._[:alnum:]-]+ dhclient(-2.2.x)?: parse_option_buffer: malformed option dhcp.finger-server \(code 73\): option length exceeds option buffer length.$
-#en Apr 19 18:14:40 sdk dhclient: parse_option_buffer: malformed option dhcp.netinfo-server-address (code 112): option length exceeds option buffer length.
-^\w{3} [ :0-9]{11} [._[:alnum:]-]+ dhclient(-2.2.x)?: parse_option_buffer: malformed option dhcp.netinfo-server-address \(code 112\): option length exceeds option buffer length.$
-#en
-#Apr 22 02:36:13 sdk dhclient: parse_option_buffer: malformed option dhcp.<unknown> (code 115): option length exceeds option buffer length.
-#Apr 21 19:20:15 xalias dhclient: parse_option_buffer: malformed option dhcp.user-class (code 77): option length exceeds option buffer length.
-#Apr 22 11:28:37 xalias dhclient: parse_option_buffer: malformed option dhcp.<unknown> (code 111): option length exceeds option buffer length.
-^\w{3} [ :0-9]{11} [._[:alnum:]-]+ dhclient(-2.2.x)?: parse_option_buffer: malformed option dhcp.<unknown> \(code 115\): option length exceeds option buffer length.$
-^\w{3} [ :0-9]{11} [._[:alnum:]-]+ dhclient(-2.2.x)?: parse_option_buffer: malformed option dhcp.user-class \(code 77\): option length exceeds option buffer length.$
-^\w{3} [ :0-9]{11} [._[:alnum:]-]+ dhclient(-2.2.x)?: parse_option_buffer: malformed option dhcp.<unknown> \(code 111\): option length exceeds option buffer length.$
-^\w{3} [ :0-9]{11} [._[:alnum:]-]+ dhclient(-2.2.x)?: parse_option_buffer: malformed option dhcp.pop-server \(code 70\): option length exceeds option buffer length.$
-#Catchall;
-^\w{3} [ :0-9]{11} [._[:alnum:]-]+ dhclient(-2.2.x)?: parse_option_buffer: malformed option .+ \(code [0-9]+\): option length exceeds option buffer length.$
+^\w{3} [ :0-9]{11} [._[:alnum:]-]+ dhclient: DHCP(NAK|ACK|OFFER) of [.0-9]{7,15} from [.0-9]{7,15}$
+^\w{3} [ :0-9]{11} [._[:alnum:]-]+ dhclient: DHCP(REQUEST|RELEASE) of [.0-9]{7,15} on [[:alnum:].]+ to [.0-9]{7,15} port 67( \(xid=0x[[:alnum:]]+\))?$
+^\w{3} [ :0-9]{11} [._[:alnum:]-]+ dhclient: last message repeated [0-9]+ times$
+^\w{3} [ :0-9]{11} [._[:alnum:]-]+ dhclient: parse_option_buffer: malformed option dhcp.finger-server \(code 73\): option length exceeds option buffer length.$
+^\w{3} [ :0-9]{11} [._[:alnum:]-]+ dhclient: parse_option_buffer: malformed option dhcp.netinfo-server-address \(code 112\): option length exceeds option buffer length.$
+^\w{3} [ :0-9]{11} [._[:alnum:]-]+ dhclient: parse_option_buffer: malformed option dhcp.<unknown> \(code 115\): option length exceeds option buffer length.$
+^\w{3} [ :0-9]{11} [._[:alnum:]-]+ dhclient: parse_option_buffer: malformed option dhcp.user-class \(code 77\): option length exceeds option buffer length.$
+^\w{3} [ :0-9]{11} [._[:alnum:]-]+ dhclient: parse_option_buffer: malformed option dhcp.<unknown> \(code 111\): option length exceeds option buffer length.$
+^\w{3} [ :0-9]{11} [._[:alnum:]-]+ dhclient: parse_option_buffer: malformed option dhcp.pop-server \(code 70\): option length exceeds option buffer length.$
+^\w{3} [ :0-9]{11} [._[:alnum:]-]+ dhclient: parse_option_buffer: malformed option .+ \(code [0-9]+\): option length exceeds option buffer length.$
