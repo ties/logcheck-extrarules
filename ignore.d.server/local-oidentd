@@ -1,0 +1,3 @@
+^\w{3} [ :0-9]{11} [._[:alnum:]-]+ oidentd\[[0-9]+\]: \[[.[:alnum:]-]+\] Successful lookup: [0-9]+ , [0-9]+ : [._[:alnum:]-]+ \([._[:alnum:]-]+\)$
+^\w{3} [ :0-9]{11} [._[:alnum:]-]+ oidentd\[[0-9]+\]: Connection from [._[:alnum:]-]+:[0-9]+$
+^\w{3} [ :0-9]{11} [._[:alnum:]-]+ oidentd\[[0-9]+\]: Connection from [._[:alnum:]-]+ \([._[:alnum:]-]+\):[0-9]+$
