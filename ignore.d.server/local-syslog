@@ -3,3 +3,4 @@
 #Feb 18 06:25:44 vlweb01 rsyslogd: [origin software="rsyslogd" swVersion="3.18.6" x-pid="2693" x-info="http://www.rsyslog.com"] restart
 ^\w{3} [ :0-9]{11} [._[:alnum:]-]+ kernel: imklog 3.[0-9.]+, log source = /proc/kmsg started.$
 ^\w{3} [ :0-9]{11} [._[:alnum:]-]+ rsyslogd: [origin software="rsyslogd" swVersion="3.[0-9.]+" x-pid="[0-9]+" x-info="http://www.rsyslog.com"] restart$
+^\w{3} [ :0-9]{11} [._[:alnum:]-]+ rsyslogd: [origin software="rsyslogd" swVersion="3.[0-9.]+" x-pid="[0-9]+" x-info="http:\/\/www.rsyslog.com"] rsyslogd was HUPed$

@@ -1,7 +1,9 @@
 # Puppet Master
 ^\w{3} [ :0-9]{11} [._[:alnum:]-]+ puppet-master\[[0-9]+\]: Compiled catalog for [._[:alnum:]-]+ in environment [._[:alnum:]-]+ in [.[:digit:]]+ seconds$
+^\w{3} [ :0-9]{11} [._[:alnum:]-]+ puppet-master\[[0-9]+\]: Not sending tagmail report; no changes$
 
 # Puppet Agent
+^\w{3} [ :0-9]{11} [._[:alnum:]-]+ puppet-agent\[[0-9]+\]: Not sending tagmail report; no changes$
 ^\w{3} [ :0-9]{11} [._[:alnum:]-]+ puppet-agent\[[0-9]+\]: Retrieving pluginfacts$
 ^\w{3} [ :0-9]{11} [._[:alnum:]-]+ puppet-agent\[[0-9]+\]: Retrieving plugin$
 ^\w{3} [ :0-9]{11} [._[:alnum:]-]+ puppet-agent\[[0-9]+\]: Loading facts$
@@ -9,4 +11,8 @@
 ^\w{3} [ :0-9]{11} [._[:alnum:]-]+ puppet-agent\[[0-9]+\]: Applying configuration version '[0-9]+'$
 ^\w{3} [ :0-9]{11} [._[:alnum:]-]+ puppet-agent\[[0-9]+\]: Computing checksum on file [._\/[:alnum:]-]+$
 ^\w{3} [ :0-9]{11} [._[:alnum:]-]+ puppet-agent\[[0-9]+\]: \(\/Stage\[main]\/[_:[:alnum:]-]+\/File\[[._\/[:alnum:]-]+]\/content\) content changed '{[[:alnum:]-]+}[[:alnum:]-]+' to '{[[:alnum:]-]+}[[:alnum:]-]+'$
-^\w{3} [ :0-9]{11} [._[:alnum:]-]+ puppet-agent\[[0-9]+\]: \(\/Stage\[main]\/[_:[:alnum:]-]+\/File\[[._\/[:alnum:]-]+]\) Filebucketed [._\/[:alnum:]-]+ to puppet with sum [[:alnum:]-]+$
+^\w{3} [ :0-9]{11} [._[:alnum:]-]+ puppet-agent\[[0-9]+\]: \(\/Stage\[main]\/[_:[:alnum:]-]+\/File\[[._\/[:alnum:]-]+]\) Filebucketed [._\/[:alnum:]-]+ to [._[:alnum:]-]+ with sum [[:alnum:]-]+$
+^\w{3} [ :0-9]{11} [._[:alnum:]-]+ puppet-agent\[[0-9]+\]: \(\/Stage\[main]\/[_:[:alnum:]-]+\/File\[[._\/[:alnum:]-]+]\/ensure\) removed$
+^\w{3} [ :0-9]{11} [._[:alnum:]-]+ puppet-agent\[[0-9]+\]: \(\/Stage\[main]\/[_:[:alnum:]-]+\/Tidy\[[._[:alnum:]-]+]\) Tidying File\[[._\/[:alnum:]-]+]$
+^\w{3} [ :0-9]{11} [._[:alnum:]-]+ puppet-agent\[[0-9]+\]: Not sending tagmail report; no changes$
+^\w{3} [ :0-9]{11} [._[:alnum:]-]+ puppet-agent\[[0-9]+\]: Finished catalog run in [._[:alnum:]-]+ seconds$
