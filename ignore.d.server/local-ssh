@@ -36,3 +36,4 @@
 ^\w{3} [ :0-9]{11} [._[:alnum:]-]+ sshd\[[0-9]+\]: Received disconnect from [[:alnum:]\.:]+: 11: ok \[preauth\]$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ sshd\[[[:digit:]]+\]: Timeout, client not responding\.$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ sshd\[[[:digit:]]+\]: Received disconnect from [[:digit:]\.:]+: 11: Normal Shutdown, Thank you for playing \[preauth\]$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ sshd\[[[:digit:]]+\]: error: connect_to [._[:alnum:]-]+: unknown host \(Name or service not known\)$
