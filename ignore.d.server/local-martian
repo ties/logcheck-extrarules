@@ -1,4 +1,5 @@
 # Ignore new format (3.16 kernel) for martians as well as the 'll header' message
 ^\w{3} [ :0-9]{11} [._[:alnum:]-]+ kernel: \[[ \.[:xdigit:]]+\]( IPv4:)? martian source [\.:[:xdigit:]]+ from [\.:[:xdigit:]]+, on dev [[:alnum:]]+$
 ^\w{3} [ :0-9]{11} [._[:alnum:]-]+ kernel: \[[ \.[:xdigit:]]+\] ll header: 00000000: ff ff ff ff ff (ff|0c) [[:alnum:] ]{24}\s+[0-9\.\:DHPWinxv{^]*$
+^\w{3} [ :0-9]{11} [._[:alnum:]-]+ kernel: \[[ \.[:xdigit:]]+\] ll header: 00000000: ff ff ff ff ff (ff|0c) [[:alnum:] ]{24}\s+[\.[:alnum:]]*$
 ^\w{3} [ :0-9]{11} [._[:alnum:]-]+ kernel: \[[ \.[:xdigit:]]+\]( IPv4:)? martian destination [\.:[:xdigit:]]+ from [\.:[:xdigit:]]+, dev [[:alnum:]]+$
