@@ -1,0 +1,4 @@
+# 'no irq handler' lines
+# Jul  6 09:22:26 host kernel: [uptime_s.nanos] do_IRQ: 3.154 No irq handler for vector (irq -1)
+#kernel time sync status change 4001
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ kernel: \[[[:digit:]\.]+\] do_IRQ: [[:digit:]]\.[[:digit:]]+ No irq handler for vector \(irq -1\)$
