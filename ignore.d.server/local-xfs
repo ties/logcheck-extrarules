@@ -1,0 +1,7 @@
+# XFS fsr creates syslog messages
+# Feb  7 05:44:01 host fsr[23668]: xfs_fsr -m /proc/mounts -t 7200 -f /var/tmp/.fsrlast_xfs ...
+# Feb  7 05:44:02 host fsr[23671]: /var/backups start inode=0
+# Feb  7 05:44:09 host fsr[23668]: Completed all 10 passes
+^\w{3} [ :0-9]{11} [._[:alnum:]-]+ fsr[[0-9]+]: xfs_fsr -m [/[:alnum:]]+ .*$
+^\w{3} [ :0-9]{11} [._[:alnum:]-]+ fsr[[0-9]+]: [._/[:alnum:]-]+ start inode=0$
+^\w{3} [ :0-9]{11} [._[:alnum:]-]+ fsr[[0-9]+]: Completed all [0-9]+ passes$
