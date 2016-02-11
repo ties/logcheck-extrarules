@@ -1,2 +1,3 @@
 # ignore apache restart at midnight
 ^\w{3} [ :[:digit:]]{2,4} 00:00:00 [._[:alnum:]-]+ nagios3: CURRENT SERVICE STATE: localhost;HTTP;CRITICAL;HARD;4;Connection refused$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ nagios3: message repeated [0-9]+ times: \[ Auto-save of retention data completed successfully\.\]$

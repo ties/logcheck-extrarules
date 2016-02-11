@@ -1,0 +1,2 @@
+# Process accounting resumted
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ kernel: \[[\.0-9]+\] Process accounting resumed$
