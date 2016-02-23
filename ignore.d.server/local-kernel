@@ -1,2 +1,4 @@
-# Process accounting resumted
+# Process accounting resumed
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ kernel: \[[\.0-9]+\] Process accounting resumed$
+# perf samples too long (KVM/X58/5 series chipset issue)
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ kernel: \[[\.0-9]+\] perf samples too long \([0-9]{3,5} > [0-9]{3,5}\), lowering kernel\.perf_event_max_sample_rate to [0-9]{3,5}$
