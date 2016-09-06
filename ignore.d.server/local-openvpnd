@@ -1,0 +1,7 @@
+#
+# Rules for openvpn, iff it logs to syslog
+#
+#^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ ovpn-[_a-Z]+\[[[:digit:]]+\]: [[:alnum:]\.]+/[[:alnum:]:\.]+:[[:digit:]]+$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ ovpn-[_a-Z]+\[[[:digit:]]+\]: [[:alnum:]\.]+/[[:alnum:]:\.]+:[[:digit:]]+ (Control Channel|Data Channel Decrypt|Data Channel Encrypt).+$
+\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ ovpn-[_a-Z]+\[[[:digit:]]+\]: [[:alnum:]\.]+/[[:alnum:]:\.]+:[[:digit:]]+ VERIFY OK:.+$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ ovpn-[_a-Z]+\[[[:digit:]]+\]: [[:alnum:]\.]+/[[:alnum:]:\.]+:[[:digit:]]+ TLS: (tls_process|soft reset).*$
