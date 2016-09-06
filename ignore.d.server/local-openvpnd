@@ -11,6 +11,7 @@
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ ovpn-[_a-Z]+\[[[:digit:]]+\]: [[:alnum:]\.]+/[[:alnum:]:\.]+:[[:digit:]]+ SENT CONTROL \[[[:alnum:]\.]+\]: 'PUSH_REPLY,.*' \(status=1\)$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ ovpn-[_a-Z]+\[[[:digit:]]+\]: [[:alnum:]\.]+/[[:alnum:]:\.]+:[[:digit:]]+ MULTI_sva: pool returned.*$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ ovpn-[_a-Z]+\[[[:digit:]]+\]: [[:alnum:]\.]+/[[:alnum:]:\.]+:[[:digit:]]+ MULTI: Learn: [0-9a-f:]+ -> .*$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ ovpn-[_a-Z]+\[[[:digit:]]+\]: [[:alnum:]:\.]+:[[:digit:]]+ \[[[:alnum:]:\.]+\] Peer Connection Initiated with \[AF_INET\][[:alnum:]:\.]+:[[:digit:]]+$
 # Server startup
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ ovpn-[_a-Z]+\[[[:digit:]]+\]: OpenVPN 2.+$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ ovpn-[_a-Z]+\[[[:digit:]]+\]: NOTE: the current --script-security setting may allow this configuration to call user-defined scripts$
