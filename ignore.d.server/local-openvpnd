@@ -1,45 +1,45 @@
 #
 # Rules for openvpn, iff it logs to syslog
 #
-#^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ ovpn-[_a-Z]+\[[[:digit:]]+\]: [[:alnum:]\.]+/[[:alnum:]:\.]+:[[:digit:]]+$
-^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ ovpn-[_a-Z]+\[[[:digit:]]+\]: [[:alnum:]\.]+(/[[:alnum:]:\.]+)?:[[:digit:]]+ (Control Channel|Data Channel Decrypt|Data Channel Encrypt).+$
-\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ ovpn-[_a-Z]+\[[[:digit:]]+\]: [[:alnum:]\.]+/[[:alnum:]:\.]+:[[:digit:]]+ VERIFY OK:.+$
-^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ ovpn-[_a-Z]+\[[[:digit:]]+\]: [[:alnum:]\.]+/[[:alnum:]:\.]+:[[:digit:]]+ TLS: (tls_process|soft reset).*$
+#^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ ovpn-[_a-zA-Z]+\[[[:digit:]]+\]: [[:alnum:]\.]+/[[:alnum:]:\.]+:[[:digit:]]+$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ ovpn-[_a-zA-Z]+\[[[:digit:]]+\]: [[:alnum:]\.]+(/[[:alnum:]:\.]+)?:[[:digit:]]+ (Control Channel|Data Channel Decrypt|Data Channel Encrypt).+$
+\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ ovpn-[_a-zA-Z]+\[[[:digit:]]+\]: [[:alnum:]\.]+/[[:alnum:]:\.]+:[[:digit:]]+ VERIFY OK:.+$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ ovpn-[_a-zA-Z]+\[[[:digit:]]+\]: [[:alnum:]\.]+/[[:alnum:]:\.]+:[[:digit:]]+ TLS: (tls_process|soft reset).*$
 # After initial connection
-^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ ovpn-[_a-Z]+\[[[:digit:]]+\]: [[:alnum:]\.]+/[[:alnum:]:\.]+:[[:digit:]]+ send_push_reply\(\): safe_cap=960$
-^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ ovpn-[_a-Z]+\[[[:digit:]]+\]: [[:alnum:]\.]+/[[:alnum:]:\.]+:[[:digit:]]+ PUSH: Received control message: 'PUSH_REQUEST'$
-^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ ovpn-[_a-Z]+\[[[:digit:]]+\]: [[:alnum:]\.]+/[[:alnum:]:\.]+:[[:digit:]]+ SENT CONTROL \[[[:alnum:]\.]+\]: 'PUSH_REPLY,.*' \(status=1\)$
-^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ ovpn-[_a-Z]+\[[[:digit:]]+\]: [[:alnum:]\.]+/[[:alnum:]:\.]+:[[:digit:]]+ MULTI_sva: pool returned.*$
-^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ ovpn-[_a-Z]+\[[[:digit:]]+\]: [[:alnum:]\.]+/[[:alnum:]:\.]+:[[:digit:]]+ MULTI: Learn: [0-9a-f:]+ -> .*$
-^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ ovpn-[_a-Z]+\[[[:digit:]]+\]: [[:alnum:]:\.]+:[[:digit:]]+ \[[[:alnum:]:\.]+\] Peer Connection Initiated with \[AF_INET\][[:alnum:]:\.]+:[[:digit:]]+$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ ovpn-[_a-zA-Z]+\[[[:digit:]]+\]: [[:alnum:]\.]+/[[:alnum:]:\.]+:[[:digit:]]+ send_push_reply\(\): safe_cap=960$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ ovpn-[_a-zA-Z]+\[[[:digit:]]+\]: [[:alnum:]\.]+/[[:alnum:]:\.]+:[[:digit:]]+ PUSH: Received control message: 'PUSH_REQUEST'$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ ovpn-[_a-zA-Z]+\[[[:digit:]]+\]: [[:alnum:]\.]+/[[:alnum:]:\.]+:[[:digit:]]+ SENT CONTROL \[[[:alnum:]\.]+\]: 'PUSH_REPLY,.*' \(status=1\)$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ ovpn-[_a-zA-Z]+\[[[:digit:]]+\]: [[:alnum:]\.]+/[[:alnum:]:\.]+:[[:digit:]]+ MULTI_sva: pool returned.*$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ ovpn-[_a-zA-Z]+\[[[:digit:]]+\]: [[:alnum:]\.]+/[[:alnum:]:\.]+:[[:digit:]]+ MULTI: Learn: [0-9a-f:]+ -> .*$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ ovpn-[_a-zA-Z]+\[[[:digit:]]+\]: [[:alnum:]:\.]+:[[:digit:]]+ \[[[:alnum:]:\.]+\] Peer Connection Initiated with \[AF_INET\][[:alnum:]:\.]+:[[:digit:]]+$
 # Server startup
-^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ ovpn-[_a-Z]+\[[[:digit:]]+\]: OpenVPN 2.+$
-^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ ovpn-[_a-Z]+\[[[:digit:]]+\]: NOTE: the current --script-security setting may allow this configuration to call user-defined scripts$
-^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ ovpn-[_a-Z]+\[[[:digit:]]+\]: Diffie-Hellman initialized with (2048|4096|8192) bit key$
-^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ ovpn-[_a-Z]+\[[[:digit:]]+\]: Control Channel Authentication: using '(a-Z0-9.)+' as a OpenVPN static key file$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ ovpn-[_a-zA-Z]+\[[[:digit:]]+\]: OpenVPN 2.+$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ ovpn-[_a-zA-Z]+\[[[:digit:]]+\]: NOTE: the current --script-security setting may allow this configuration to call user-defined scripts$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ ovpn-[_a-zA-Z]+\[[[:digit:]]+\]: Diffie-Hellman initialized with (2048|4096|8192) bit key$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ ovpn-[_a-zA-Z]+\[[[:digit:]]+\]: Control Channel Authentication: using '[a-zA-Z0-9.]+' as a OpenVPN static key file$
 # :-( SHA1
-^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ ovpn-[_a-Z]+\[[[:digit:]]+\]: Outgoing Control Channel Authentication: Using 160 bit message hash 'SHA1' for HMAC authentication
-^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ ovpn-[_a-Z]+\[[[:digit:]]+\]: TLS-Auth MTU parms \[.*\]$
-^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ ovpn-[_a-Z]+\[[[:digit:]]+\]: Socket Buffers: R=\[.*\]$
-^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ ovpn-[_a-Z]+\[[[:digit:]]+\]: TUN/TAP device tapi[0-9]+ opened$
-^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ ovpn-[_a-Z]+\[[[:digit:]]+\]: TUN/TAP TX queue length set to [0-9]{3,4}$
-^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ ovpn-[_a-Z]+\[[[:digit:]]+\]: do_ifconfig,.*$
-^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ ovpn-[_a-Z]+\[[[:digit:]]+\]: /sbin/ifconfig tap[0-9]+ .*$
-^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ ovpn-[_a-Z]+\[[[:digit:]]+\]: Data Channel MTU parms \[.*\]$
-^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ ovpn-[_a-Z]+\[[[:digit:]]+\]: (UID|GID) set to [[:alnum:]]+$
-^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ ovpn-[_a-Z]+\[[[:digit:]]+\]: UDPv4 link local \(bound\): \[undef\]$
-^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ ovpn-[_a-Z]+\[[[:digit:]]+\]: UDPv4 link remote: \[undef\]$
-^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ ovpn-[_a-Z]+\[[[:digit:]]+\]: MULTI: multi_init called, r=256 v=256$
-^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ ovpn-[_a-Z]+\[[[:digit:]]+\]: IFCONFIG POOL: base=[0-9\.]+ size=[0-9]+, ipv6=0$
-^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ ovpn-[_a-Z]+\[[[:digit:]]+\]: ifconfig_pool_read\(\), in=.*, TODO: IPv6$
-^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ ovpn-[_a-Z]+\[[[:digit:]]+\]: succeeded -> ifconfig_pool_set\(\)$
-^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ ovpn-[_a-Z]+\[[[:digit:]]+\]: IFCONFIG POOL LIST$
-^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ ovpn-[_a-Z]+\[[[:digit:]]+\]: [a-Z0-9\.]+,[0-9\.]+$
-^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ ovpn-[_a-Z]+\[[[:digit:]]+\]: Initialization Sequence Completed$
-^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ ovpn-[_a-Z]+\[[[:digit:]]+\]: MULTI: multi_create_instance called$
-^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ ovpn-[_a-Z]+\[[[:digit:]]+\]: [0-9\.]+:[0-9]+ Re-using SSL/TLS context
-^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ ovpn-[_a-Z]+\[[[:digit:]]+\]: [0-9\.]+:[0-9]+ Control Channel MTU parms \[.*\]$
-^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ ovpn-[_a-Z]+\[[[:digit:]]+\]: [0-9.]+:[0-9]+ Data Channel MTU parms \[.*\]$
-^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ ovpn-[_a-Z]+\[[[:digit:]]+\]: [0-9.]+:[0-9]+ Local Options hash \(VER=V4\): '[[:alnum:]]+'$
-^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ ovpn-[_a-Z]+\[[[:digit:]]+\]: [0-9.]+:[0-9]+ Expected Remote Options hash \(VER=V4\): '[[:alnum:]]+'$
-^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ ovpn-[_a-Z]+\[[[:digit:]]+\]: [0-9.]+:[0-9]+ TLS: Initial packet from \[AF_INET\][0-9.]+:[0-9]+,.*$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ ovpn-[_a-zA-Z]+\[[[:digit:]]+\]: Outgoing Control Channel Authentication: Using 160 bit message hash 'SHA1' for HMAC authentication
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ ovpn-[_a-zA-Z]+\[[[:digit:]]+\]: TLS-Auth MTU parms \[.*\]$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ ovpn-[_a-zA-Z]+\[[[:digit:]]+\]: Socket Buffers: R=\[.*\]$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ ovpn-[_a-zA-Z]+\[[[:digit:]]+\]: TUN/TAP device tapi[0-9]+ opened$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ ovpn-[_a-zA-Z]+\[[[:digit:]]+\]: TUN/TAP TX queue length set to [0-9]{3,4}$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ ovpn-[_a-zA-Z]+\[[[:digit:]]+\]: do_ifconfig,.*$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ ovpn-[_a-zA-Z]+\[[[:digit:]]+\]: /sbin/ifconfig tap[0-9]+ .*$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ ovpn-[_a-zA-Z]+\[[[:digit:]]+\]: Data Channel MTU parms \[.*\]$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ ovpn-[_a-zA-Z]+\[[[:digit:]]+\]: (UID|GID) set to [[:alnum:]]+$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ ovpn-[_a-zA-Z]+\[[[:digit:]]+\]: UDPv4 link local \(bound\): \[undef\]$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ ovpn-[_a-zA-Z]+\[[[:digit:]]+\]: UDPv4 link remote: \[undef\]$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ ovpn-[_a-zA-Z]+\[[[:digit:]]+\]: MULTI: multi_init called, r=256 v=256$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ ovpn-[_a-zA-Z]+\[[[:digit:]]+\]: IFCONFIG POOL: base=[0-9\.]+ size=[0-9]+, ipv6=0$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ ovpn-[_a-zA-Z]+\[[[:digit:]]+\]: ifconfig_pool_read\(\), in=.*, TODO: IPv6$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ ovpn-[_a-zA-Z]+\[[[:digit:]]+\]: succeeded -> ifconfig_pool_set\(\)$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ ovpn-[_a-zA-Z]+\[[[:digit:]]+\]: IFCONFIG POOL LIST$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ ovpn-[_a-zA-Z]+\[[[:digit:]]+\]: [a-zA-Z0-9\.]+,[0-9\.]+$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ ovpn-[_a-zA-Z]+\[[[:digit:]]+\]: Initialization Sequence Completed$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ ovpn-[_a-zA-Z]+\[[[:digit:]]+\]: MULTI: multi_create_instance called$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ ovpn-[_a-zA-Z]+\[[[:digit:]]+\]: [0-9\.]+:[0-9]+ Re-using SSL/TLS context
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ ovpn-[_a-zA-Z]+\[[[:digit:]]+\]: [0-9\.]+:[0-9]+ Control Channel MTU parms \[.*\]$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ ovpn-[_a-zA-Z]+\[[[:digit:]]+\]: [0-9.]+:[0-9]+ Data Channel MTU parms \[.*\]$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ ovpn-[_a-zA-Z]+\[[[:digit:]]+\]: [0-9.]+:[0-9]+ Local Options hash \(VER=V4\): '[[:alnum:]]+'$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ ovpn-[_a-zA-Z]+\[[[:digit:]]+\]: [0-9.]+:[0-9]+ Expected Remote Options hash \(VER=V4\): '[[:alnum:]]+'$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ ovpn-[_a-zA-Z]+\[[[:digit:]]+\]: [0-9.]+:[0-9]+ TLS: Initial packet from \[AF_INET\][0-9.]+:[0-9]+,.*$
