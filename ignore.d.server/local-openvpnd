@@ -17,6 +17,8 @@
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ ovpn-[_a-zA-Z]+\[[[:digit:]]+\]: NOTE: the current --script-security setting may allow this configuration to call user-defined scripts$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ ovpn-[_a-zA-Z]+\[[[:digit:]]+\]: Diffie-Hellman initialized with (2048|4096|8192) bit key$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ ovpn-[_a-zA-Z]+\[[[:digit:]]+\]: Control Channel Authentication: using '[a-zA-Z0-9.]+' as a OpenVPN static key file$
+# Server messages after restart: missing hostname (!)
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]* ovpn-[_a-zA-Z]+\[[[:digit:]]+\]: last message repeated [0-9]+ times$
 # :-( SHA1
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ ovpn-[_a-zA-Z]+\[[[:digit:]]+\]: Outgoing Control Channel Authentication: Using 160 bit message hash 'SHA1' for HMAC authentication
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ ovpn-[_a-zA-Z]+\[[[:digit:]]+\]: TLS-Auth MTU parms \[.*\]$
