@@ -3,3 +3,4 @@
 ^\w{3} [ :0-9]{11} [._[:alnum:]-]+ su\[[0-9]+\]: \(pam_[[:alnum:]]+\) session opened for user [_[:alnum:]-]+ by ([[:alnum:]-]+)?\(uid=[0-9]+\)$
 ^\w{3} [ :0-9]{11} [._[:alnum:]-]+ su\[[0-9]+\]: pam_[[:alnum:]]+\(su:session\): session closed for user [_[:alnum:]-]+$
 ^\w{3} [ :0-9]{11} [._[:alnum:]-]+ su\[[0-9]+\]: pam_[[:alnum:]]+\(su:session\): session opened for user [_[:alnum:]-]+ by ([[:alnum:]-]+)?\(uid=[0-9]+\)$
+^\w{3} [ :0-9]{11} [._[:alnum:]-]+ su\[[0-9]+\]: pam_systemd\(su:session\): Cannot create session: Already running in a session$
