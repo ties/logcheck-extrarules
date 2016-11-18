@@ -32,9 +32,6 @@
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ sshd\[[0-9]+\]: subsystem(s)? request for sftp by user [-._[:alnum:]]+$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ sshd\[[0-9]+\]: PAM service\(sshd\) ignoring max retries; [0-9]{1,2} > [0-9]$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ sshd\[[0-9]+\]: message repeated [0-9] times: [ Failed password for [[:alnum:]\.\-]+ from [0-9\.]{7,15} port [0-9]+ ssh2]$
-^\w{3} [ :0-9]{11} [._[:alnum:]-]+ sshd\[[0-9]+\]:( error:)? Received disconnect from [[:alnum:].:]+: 3: com\.jcraft\.jsch\.JSchException: Auth fail \[preauth\]$
-^\w{3} [ :0-9]{11} [._[:alnum:]-]+ sshd\[[0-9]+\]:( error:)? Received disconnect from [[:alnum:].:]+: 3: com\.jcraft\.jsch\.JSchException: Auth cancel \[preauth\]$
-^\w{3} [ :0-9]{11} [._[:alnum:]-]+ sshd\[[0-9]+\]:( error:)? Received disconnect from [[:alnum:].:]+: 3: java\.net\.SocketTimeoutException: Read timed out \[preauth\]$
 # 2014-08: 'Corrupted mac on input', PECL ssh2
 ^\w{3} [ :0-9]{11} [._[:alnum:]-]+ sshd\[[0-9]+\]: Corrupted MAC on input\. \[preauth\]$
 ^\w{3} [ :0-9]{11} [._[:alnum:]-]+ sshd\[[0-9]+\]: Received disconnect from [[:alnum:].:]+: 11: PECL/ssh2 \(http://pecl\.php\.net/packages/ssh2\) \[preauth\]$
@@ -58,3 +55,5 @@
 ^\w{3} [ :0-9]{11} [._[:alnum:]-]+ sshd\[[0-9]+\]: Disconnected from [[:alnum:].:]+ port [0-9]+(\s+\[preauth\])?$
 ^\w{3} [ :0-9]{11} [._[:alnum:]-]+ sshd\[[0-9]+\]: fatal: Unable to negotiate with [[:alnum:].:]+ port [0-9]+: no matching key exchange method found. Their offer: diffie-hellman-group1-sha1 \[preauth\]$
 ^\w{3} [ :0-9]{11} [._[:alnum:]-]+ sshd\[[0-9]+\]: Received disconnect from [[:alnum:].:]+(: | port [0-9]+:)11: (Bye )?Bye \[preauth\]$
+^\w{3} [ :0-9]{11} [._[:alnum:]-]+ sshd\[[0-9]+\]:( error:)? Received disconnect from [[:alnum:].:]+(: | port [0-9]+:)3: com\.jcraft\.jsch\.JSchException: (Auth fail|Auth cancel) \[preauth\]$
+^\w{3} [ :0-9]{11} [._[:alnum:]-]+ sshd\[[0-9]+\]:( error:)? Received disconnect from [[:alnum:].:]+(: | port [0-9]+:)3: java\.net\.SocketTimeoutException: Read timed out \[preauth\]$
