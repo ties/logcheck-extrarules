@@ -51,7 +51,7 @@
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ sshd\[[[:digit:]]+\]: Accepted publickey for [^[:space:]]+ from [^[:space:]]+ port [[:digit:]]+ ssh2: (ECDSA|RSA|ED25519) (SHA256:)?[+:[:alnum:]]+$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ sshd\[[[:digit:]]+\]: error: maximum authentication attempts exceeded for( invalid user)? [[:alnum:]]+ from [[:alnum:]\.:]+ port [0-9]+ ssh2 \[preauth\]$
 # 16.04
-^\w{3} [ :0-9]{11} [._[:alnum:]-]+ sshd\[[0-9]+\]: Received disconnect from [[:alnum:].:]+ port [0-9]+:11:\s+(disconnected by user|\[preauth\])$
+^\w{3} [ :0-9]{11} [._[:alnum:]-]+ sshd\[[0-9]+\]: Received disconnect from [[:alnum:].:]+ port [0-9]+:11:\s+(disconnected by user)?( \[preauth\])?$
 ^\w{3} [ :0-9]{11} [._[:alnum:]-]+ sshd\[[0-9]+\]: Disconnected from [[:alnum:].:]+ port [0-9]+(\s+\[preauth\])?$
 ^\w{3} [ :0-9]{11} [._[:alnum:]-]+ sshd\[[0-9]+\]: fatal: Unable to negotiate with [[:alnum:].:]+ port [0-9]+: no matching key exchange method found. Their offer: diffie-hellman-group1-sha1 \[preauth\]$
 ^\w{3} [ :0-9]{11} [._[:alnum:]-]+ sshd\[[0-9]+\]: Received disconnect from [[:alnum:].:]+(: | port [0-9]+:)11: (Bye )?Bye \[preauth\]$
