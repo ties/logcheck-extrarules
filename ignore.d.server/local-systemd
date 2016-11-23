@@ -14,4 +14,4 @@
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd\[[0-9]+\]: Received SIGRTMIN\+24 from PID [0-9]+ \(kill\)\.$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd: pam_unix\(systemd-user:session\): session opened for user [._[:alnum:]]+ by \(uid=0\)$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd: pam_unix\(systemd-user:session\): session closed for user [._[:alnum:]]+$
-^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd\[[0-9]+\]: apt-daily\.timer: Adding [0-9]h [0-9]{1,2}min [0-9]{1,2}\.[0-9]+s random time\.$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd\[[0-9]+\]: apt-daily\.timer: Adding( [0-9]h)? [0-9]{1,2}min [0-9]{1,2}\.[0-9]+s random time\.$
