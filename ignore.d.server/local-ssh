@@ -53,7 +53,7 @@
 # 16.04
 ^\w{3} [ :0-9]{11} [._[:alnum:]-]+ sshd\[[0-9]+\]: Received disconnect from [[:alnum:].:]+ port [0-9]+:11:\s+(disconnected by user)?( \[preauth\])?$
 ^\w{3} [ :0-9]{11} [._[:alnum:]-]+ sshd\[[0-9]+\]: (Connection reset by|Disconnected from) [[:alnum:].:]+ port [0-9]+(\s+\[preauth\])?$
-^\w{3} [ :0-9]{11} [._[:alnum:]-]+ sshd\[[0-9]+\]: fatal: Unable to negotiate with [[:alnum:].:]+ port [0-9]+: no matching key exchange method found\. Their offer: diffie-hellman-group1-sha1 \[preauth\]$
+^\w{3} [ :0-9]{11} [._[:alnum:]-]+ sshd\[[0-9]+\]: fatal: Unable to negotiate with [[:alnum:].:]+ port [0-9]+: no matching key exchange method found\. Their offer: (,|diffie-hellman-group-exchange-sha1|diffie-hellman-group1-sha1)+ \[preauth\]$
 ^\w{3} [ :0-9]{11} [._[:alnum:]-]+ sshd\[[0-9]+\]: fatal: Unable to negotiate with [[:alnum:].:]+ port [0-9]+: no matching cipher found\. Their offer: (,|aes256-cbc|rijndael-cbc@lysator\.liu\.se|aes192-cbc|aes128-cbc|arcfour128|arcfour|3des-cbc|none)+ \[preauth\]$
 ^\w{3} [ :0-9]{11} [._[:alnum:]-]+ sshd\[[0-9]+\]: Received disconnect from [[:alnum:].:]+(: | port [0-9]+:)11: (disconnect|(Bye )?Bye|Closed due to user request.) \[preauth\]$
 ^\w{3} [ :0-9]{11} [._[:alnum:]-]+ sshd\[[0-9]+\]:( error:)? Received disconnect from [[:alnum:].:]+(: | port [0-9]+:)3: com\.jcraft\.jsch\.JSchException: (Auth fail|Auth cancel) \[preauth\]$
