@@ -8,7 +8,7 @@
 ^\w{3} [ :0-9]{11} [._[:alnum:]-]+ ntpd[[0-9]+]: adjusting clock frequency by (-)?[0-9]\.[0-9]+ to (-)?[0-9]{0,2}\.[0-9]+ppm$
 ^\w{3} [ :0-9]{11} [._[:alnum:]-]+ ntpd[[0-9]+]: skew change (-)?[0-9]+.[0-9]+ exceeds limit$
 ^\w{3} [ :0-9]{11} [._[:alnum:]-]+ ntpd[[0-9]+]: peer [[:alnum:]:\.]{7,39} now (valid|invalid)$
-^\w{3} [ :0-9]{11} [._[:alnum:]-]+ ntpd[[0-9]+]: reply from [[:alnum:]:\.]{7,39}: not synced, next query [0-9]+s$
+^\w{3} [ :0-9]{11} [._[:alnum:]-]+ ntpd[[0-9]+]: reply from [[:alnum:]:\.]{7,39}: not synced( \(alarm\))?, next query [0-9]+s$
 ^\w{3} [ :0-9]{11} [._[:alnum:]-]+ ntpd[[0-9]+]: reply from [[:alnum:]:\.]{7,39}: negative delay -0\.[0-9]+(, next query [0-9]+s)?$
 ^\w{3} [ :0-9]{11} [._[:alnum:]-]+ ntpd[[0-9]+]: (message repeated [0-9]{1,3} times: \[ )?sendto: Network is unreachable(\])$
 ^\w{3} [ :0-9]{11} [._[:alnum:]-]+ ntpd[[0-9]+]: peers refreshed$
