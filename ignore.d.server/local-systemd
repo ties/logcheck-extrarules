@@ -5,12 +5,13 @@
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd\[[0-9]+\]: (Started|Stopped) User Manager for UID [0-9]+\.$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd\[[0-9]+\]: Started Session [0-9]+ of user [._[:alnum:]]+\.$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd\[[0-9]+\]: Starting (Daily apt activities|Cleanup of Temporary Directories)\.\.\.$
-^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd\[[0-9]+\]: Started (Cleanup of Temporary Directories|Daily apt activities)\.$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd\[[0-9]+\]: Started (Cleanup of Temporary Directories|Daily apt activities|ACPI event daemon)\.$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd\[[0-9]+\]: (Created|Removed) slice User Slice of [._[:alnum:]]+$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd\[[0-9]+\]: (Reached|Stopped) target (Default|Basic System|Paths|Timers|Sockets)\.$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd\[[0-9]+\]: Startup finished in [0-9]+ms\.$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd\[[0-9]+\]: Starting Exit the Session\.\.\.$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd\[[0-9]+\]: Reached target Shutdown\.$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd\[[0-9]+\]: Reloading\.$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd\[[0-9]+\]: Received SIGRTMIN\+24 from PID [0-9]+ \(kill\)\.$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd: pam_unix\(systemd-user:session\): session opened for user [._[:alnum:]]+ by \(uid=0\)$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd: pam_unix\(systemd-user:session\): session closed for user [._[:alnum:]]+$
