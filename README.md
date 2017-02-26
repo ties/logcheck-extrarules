@@ -1,5 +1,5 @@
 ## Testing rules
-When developing a regex you probably need to test it more ofthen than you want.
+When developing a regex you probably need to test it more often than you want.
 
 ### Console
 Use the following line to test the logcheck regular expressions.
