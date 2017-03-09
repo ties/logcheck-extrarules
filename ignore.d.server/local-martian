@@ -2,6 +2,6 @@
 ^\w{3} [ :0-9]{11} [._[:alnum:]-]+ kernel: \[[ \.[:xdigit:]]+\]( IPv4:)? martian source [\.:[:xdigit:]]+ from [\.:[:xdigit:]]+, on dev [[:alnum:]]+$
 ^\w{3} [ :0-9]{11} [._[:alnum:]-]+ kernel: \[[ \.[:xdigit:]]+\] ll header: 00000000: ff ff ff ff ff (ff|0c) [[:alnum:] ]{24}\s+[0-9\.\:DHPWhikntvx\|(?{^`]*$
 # stranger ll header: seems to contain a mac address
-^\w{3} [ :0-9]{11} [._[:alnum:]-]+ kernel: \[[ \.[:xdigit:]]+\] ll header: 00000000: ([0-9a-f]{2}[ ]?)* [[:alnum:] ]{24}\s+[0-9\.\:DGHPWikntvx?&\|{^`]*$
-^\w{3} [ :0-9]{11} [._[:alnum:]-]+ kernel: \[[ \.[:xdigit:]]+\] ll header: 00000000: ff ff ff ff ff (ff|0c) [[:alnum:] ]{24}\s+[\.[:alnum:]]*$
+^\w{3} [ :0-9]{11} [._[:alnum:]-]+ kernel: \[[ \.[:xdigit:]]+\] ll header: 00000000: ([0-9a-f]{2}[ ]?)* [[:alnum:] ]{24}\s+[0-9\._\:DGHPWfikntuvx?&\|{^`]*$
+^\w{3} [ :0-9]{11} [._[:alnum:]-]+ kernel: \[[ \.[:xdigit:]]+\] ll header: 00000000: ff ff ff ff ff (ff|0c) [[:alnum:] ]{24}\s+[\._[:alnum:]]*$
 ^\w{3} [ :0-9]{11} [._[:alnum:]-]+ kernel: \[[ \.[:xdigit:]]+\]( IPv4:)? martian destination [\.:[:xdigit:]]+ from [\.:[:xdigit:]]+, dev [[:alnum:]]+$
