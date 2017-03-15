@@ -3,4 +3,5 @@
 ^\w{3} [ :0-9]{11} [._[:alnum:]-]+ kernel: \[[ 0-9.]+\] Shorewall:logflags:.*$
 ^\w{3} [ :0-9]{11} [._[:alnum:]-]+ kernel: \[[ 0-9.]+\] Shorewall:[a-z]+2fw:.*$
 ^\w{3} [ :0-9]{11} [._[:alnum:]-]+ kernel: \[[ 0-9.]+\] Shorewall:fw-[a-z]+:REJECT:IN= .*$
+^\w{3} [ :0-9]{11} [._[:alnum:]-]+ kernel: \[[ 0-9.]+\] Shorewall:[a-z]+-fw:DROP:IN=[-[:alnum:]]+ .*$
 ^\w{3} [ :0-9]{11} [._[:alnum:]-]+ kernel: \[[ 0-9.]+\] Shorewall:smurfs:.*$
