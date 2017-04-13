@@ -51,6 +51,7 @@
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ sshd\[[[:digit:]]+\]: Accepted publickey for [^[:space:]]+ from [^[:space:]]+ port [[:digit:]]+ ssh2: (ECDSA|RSA|ED25519) (SHA256:)?[+:[:alnum:]]+$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ sshd\[[[:digit:]]+\]: error: maximum authentication attempts exceeded for( invalid user)? [[:punct:][:alnum:]]+ from [[:alnum:]\.:]+ port [0-9]+ ssh2 \[preauth\]$
 # 16.04
+^\w{3} [ :0-9]{11} [._[:alnum:]-]+ sshd\[[0-9]+\]: error: Received disconnect from [[:alnum:].:]+ port [0-9]+:2:\s+Handshake failed( \[preauth\])?$
 ^\w{3} [ :0-9]{11} [._[:alnum:]-]+ sshd\[[0-9]+\]: Received disconnect from [[:alnum:].:]+ port [0-9]+:11:\s+(disconnected by user|ok)?( \[preauth\])?$
 ^\w{3} [ :0-9]{11} [._[:alnum:]-]+ sshd\[[0-9]+\]: error: Received disconnect from [[:alnum:].:]+ port [0-9]+:13:\s+(User request)?( \[preauth\])?$
 ^\w{3} [ :0-9]{11} [._[:alnum:]-]+ sshd\[[0-9]+\]: (Connection reset by|Disconnected from) [[:alnum:].:]+ port [0-9]+(\s+\[preauth\])?$
