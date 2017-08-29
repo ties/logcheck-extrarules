@@ -1,4 +1,5 @@
 # 16.0.4.2 snapd
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ /usr/lib/snapd/snapd\[[0-9]+\]: snapmgr.go:[0-9]+: No snaps to auto-refresh found$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ snapd\[[0-9]+\]: [\/0-9]{10} [:0-9]{8}\.[0-9]+ snapmgr.go:[0-9]+: No snaps to auto-refresh found$
-^\w{3} [ :0-9]{11} [._[:alnum:]-]+ /usr/lib/snapd/snapd\[[0-9]+\]: snapmgr.go:[0-9]+: DEBUG: Next refresh scheduled for [-0-9]{10} [:0-9]{8}\.[0-9]+ [+-][0-9]{4} \w{3}\.$
+# len(EST): 3, len(CEST): 4, len(AZOST): 5 
+^\w{3} [ :0-9]{11} [._[:alnum:]-]+ /usr/lib/snapd/snapd\[[0-9]+\]: snapmgr.go:[0-9]+: DEBUG: Next refresh scheduled for [-0-9]{10} [:0-9]{8}\.[0-9]+ [+-][0-9]{4} \w{3,5}\.$
