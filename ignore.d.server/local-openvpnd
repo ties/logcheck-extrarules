@@ -2,16 +2,16 @@
 # Rules for openvpn, iff it logs to syslog
 #
 #^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ ovpn-[_a-zA-Z]+\[[[:digit:]]+\]: [[:alnum:]\.]+/[[:alnum:]:\.]+:[[:digit:]]+$
-^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ ovpn-[_a-zA-Z]+\[[[:digit:]]+\]: [[:alnum:]\.]+(/[[:alnum:]:\.]+)?:[[:digit:]]+ (Control Channel|Data Channel Decrypt|Data Channel Encrypt).+$
-\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ ovpn-[_a-zA-Z]+\[[[:digit:]]+\]: [[:alnum:]\.]+/[[:alnum:]:\.]+:[[:digit:]]+ VERIFY OK:.+$
-^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ ovpn-[_a-zA-Z]+\[[[:digit:]]+\]: [[:alnum:]\.]+/[[:alnum:]:\.]+:[[:digit:]]+ TLS: (tls_process|soft reset).*$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ ovpn-[_a-zA-Z]+\[[[:digit:]]+\]:( [[:alnum:]\.]+(/[[:alnum:]:\.]+)?:[[:digit:]]+)? (Control Channel|Data Channel Decrypt|Data Channel Encrypt).+$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ ovpn-[_a-zA-Z]+\[[[:digit:]]+\]:( [[:alnum:]\.]+/[[:alnum:]:\.]+:[[:digit:]]+)? VERIFY OK:.+$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ ovpn-[_a-zA-Z]+\[[[:digit:]]+\]:( [[:alnum:]\.]+/[[:alnum:]:\.]+:[[:digit:]]+)? TLS: (tls_process|soft reset).*$
 # After initial connection
-^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ ovpn-[_a-zA-Z]+\[[[:digit:]]+\]: [[:alnum:]\.]+/[[:alnum:]:\.]+:[[:digit:]]+ send_push_reply\(\): safe_cap=960$
-^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ ovpn-[_a-zA-Z]+\[[[:digit:]]+\]: [[:alnum:]\.]+/[[:alnum:]:\.]+:[[:digit:]]+ PUSH: Received control message: 'PUSH_REQUEST'$
-^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ ovpn-[_a-zA-Z]+\[[[:digit:]]+\]: [[:alnum:]\.]+/[[:alnum:]:\.]+:[[:digit:]]+ SENT CONTROL \[[[:alnum:]\.]+\]: 'PUSH_REPLY,.*' \(status=1\)$
-^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ ovpn-[_a-zA-Z]+\[[[:digit:]]+\]: [[:alnum:]\.]+/[[:alnum:]:\.]+:[[:digit:]]+ MULTI_sva: pool returned.*$
-^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ ovpn-[_a-zA-Z]+\[[[:digit:]]+\]: [[:alnum:]\.]+/[[:alnum:]:\.]+:[[:digit:]]+ MULTI: Learn: [0-9a-f:]+ -> .*$
-^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ ovpn-[_a-zA-Z]+\[[[:digit:]]+\]: [[:alnum:]:\.]+:[[:digit:]]+ \[[[:alnum:]:\.]+\] Peer Connection Initiated with \[AF_INET\][[:alnum:]:\.]+:[[:digit:]]+$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ ovpn-[_a-zA-Z]+\[[[:digit:]]+\]:( [[:alnum:]\.]+/[[:alnum:]:\.]+:[[:digit:]]+)? send_push_reply\(\): safe_cap=960$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ ovpn-[_a-zA-Z]+\[[[:digit:]]+\]:( [[:alnum:]\.]+/[[:alnum:]:\.]+:[[:digit:]]+)? PUSH: Received control message: 'PUSH_REQUEST'$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ ovpn-[_a-zA-Z]+\[[[:digit:]]+\]:( [[:alnum:]\.]+/[[:alnum:]:\.]+:[[:digit:]]+)? SENT CONTROL \[[[:alnum:]\.]+\]: 'PUSH_REPLY,.*' \(status=1\)$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ ovpn-[_a-zA-Z]+\[[[:digit:]]+\]:( [[:alnum:]\.]+/[[:alnum:]:\.]+:[[:digit:]]+)? MULTI_sva: pool returned.*$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ ovpn-[_a-zA-Z]+\[[[:digit:]]+\]:( [[:alnum:]\.]+/[[:alnum:]:\.]+:[[:digit:]]+)? MULTI: Learn: [0-9a-f:]+ -> .*$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ ovpn-[_a-zA-Z]+\[[[:digit:]]+\]:( [[:alnum:]:\.]+:[[:digit:]]+ \[[[:alnum:]:\.]+\])? Peer Connection Initiated with \[AF_INET\][[:alnum:]:\.]+:[[:digit:]]+$
 # Server startup
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ ovpn-[_a-zA-Z]+\[[[:digit:]]+\]: OpenVPN 2.+$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ ovpn-[_a-zA-Z]+\[[[:digit:]]+\]: NOTE: the current --script-security setting may allow this configuration to call user-defined scripts$
