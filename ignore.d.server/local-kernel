@@ -5,5 +5,5 @@
 # ext4 remounts
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ kernel: \[[\.0-9]+\] EXT4-fs \([a-zA-Z]{2,3}-[0-9]{1,2}\): re-mounted\. Opts: \(null\)$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ kernel: \[[\.0-9]+\] list passed to list_sort\(\) too long for efficiency$
-# conntrack message (caused by traffic to kvm/libvirt vm?)
-^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ kernel: \[[\.0-9]+\] conntrack: generic helper won't handle protocol 132\. Please consider loading the specific helper module\.$
+# conntrack message (caused by strange traffic on subnet)
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ kernel: \[[\.0-9]+\] conntrack: generic helper won't handle protocol (47|132)\. Please consider loading the specific helper module\.$
