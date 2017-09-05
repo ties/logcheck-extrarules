@@ -37,19 +37,19 @@
 ^\w{3} [ :0-9]{11} [._[:alnum:]-]+ sshd\[[0-9]+\]: Received disconnect from [[:alnum:].:]+: 11: PECL/ssh2 \(http://pecl\.php\.net/packages/ssh2\) \[preauth\]$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ sshd\[[[:digit:]]+\]: Did not receive identification string from ::ffff:[\.0-9]+$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ sshd\[[[:digit:]]+\]: Disconnecting: bad client public DH value \[preauth\]$
-^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ sshd\[[[:digit:]]+\]: Disconnecting: Change of username or service not allowed: \([[:alnum:]]+,ssh-connection\) -> \([[:alnum:]]+,ssh-connection\) \[preauth\]$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ sshd\[[[:digit:]]+\]: Disconnecting: Change of username or service not allowed: \([;[:alnum:]]*,ssh-connection\) -> \([!;[:alnum:]]*,ssh-connection\) \[preauth\]$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ sshd\[[[:digit:]]+\]: invalid public DH value: <= 1 \[preauth\]$
 ^\w{3} [ :0-9]{11} [._[:alnum:]-]+ sshd\[[0-9]+\]: Received disconnect from [[:alnum:]\.:]+: 11: ok \[preauth\]$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ sshd\[[[:digit:]]+\]: Timeout, client not responding\.$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ sshd\[[[:digit:]]+\]: Received disconnect from [[:digit:]\.:]+(:)? (port [0-9]+:)?11: Normal Shutdown, Thank you for playing \[preauth\]$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ sshd\[[[:digit:]]+\]: Received disconnect from [[:digit:]\.:]+: 13: Unable to authenticate \[preauth\]$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ sshd\[[[:digit:]]+\]: error: connect_to [._[:alnum:]-]+: unknown host \(Name or service not known\)$
-^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ sshd\[[[:digit:]]+\]: Bad protocol version identification '(GET / HTTP/1.0|GET .* HTTP/1.1|[\\0-9]+|test||HELP)' from [[:digit:]\.]{6,15} port [[:digit:]]{3,5}$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ sshd\[[[:digit:]]+\]: Bad protocol version identification '(SSH-2\.0_CoreLab-1\.0|GET / HTTP/1.0|GET .* HTTP/1.1|[\\0-9]+|test||HELP)' from [[:digit:]\.]{6,15} port [[:digit:]]{3,5}$
 # Nmap version scan
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ sshd\[[[:digit:]]+\]: Protocol major versions differ for [[:digit:]\.]{6,15}: SSH-2\.0-OpenSSH.{10,30} vs. SSH-1.5-Nmap(-SSH-Hostkey|NSE_1.0)$
 # Allow various types of SSH keys
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ sshd\[[[:digit:]]+\]: Accepted publickey for [^[:space:]]+ from [^[:space:]]+ port [[:digit:]]+ ssh2: (ECDSA|RSA|ED25519) (SHA256:)?[+:[:alnum:]]+$
-^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ sshd\[[[:digit:]]+\]: error: maximum authentication attempts exceeded for( invalid user)? [[:punct:][:alnum:]]+ from [[:alnum:]\.:]+ port [0-9]+ ssh2 \[preauth\]$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ sshd\[[[:digit:]]+\]: error: maximum authentication attempts exceeded for( invalid user)? [[:punct:][:alnum:]]* from [[:alnum:]\.:]+ port [0-9]+ ssh2 \[preauth\]$
 # 16.04
 ^\w{3} [ :0-9]{11} [._[:alnum:]-]+ sshd\[[0-9]+\]: error: Received disconnect from [[:alnum:].:]+ port [0-9]+:2:\s+Handshake failed( \[preauth\])?$
 ^\w{3} [ :0-9]{11} [._[:alnum:]-]+ sshd\[[0-9]+\]: Received disconnect from [[:alnum:].:]+ port [0-9]+:11:\s+(disconnected by user|ok)?( \[preauth\])?$
