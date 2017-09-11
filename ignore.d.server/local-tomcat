@@ -1,2 +1,4 @@
 ^\w{3} [ :0-9]{11} [._[:alnum:]-]+ jsvc.exe.+$
+^\w{3} [ :0-9]{11} [._[:alnum:]-]+ tomcat6\[[0-9]+\]:  \* Starting Tomcat servlet engine tomcat6$
+^\w{3} [ :0-9]{11} [._[:alnum:]-]+ tomcat6\[[0-9]+\]:    \.\.\.done\.$
 
