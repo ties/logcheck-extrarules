@@ -45,7 +45,7 @@
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ sshd\[[[:digit:]]+\]: Received disconnect from [[:digit:]\.:]+: 13: Unable to authenticate \[preauth\]$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ sshd\[[[:digit:]]+\]: error: connect_to [._[:alnum:]-]+: unknown host \(Name or service not known\)$
 # Bad protocol version identification '\026\003\001\001"\001' from 164.52.0.140 port 40246
-^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ sshd\[[[:digit:]]+\]: Bad protocol version identification '(SSH-2\.0_CoreLab-1\.0|[\\"[:digit:]]{21}|GET / HTTP/1.0|GET .* HTTP/1.1|[\\0-9]+|test||HELP)' from [[:digit:]\.]{6,15} port [[:digit:]]{3,5}$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ sshd\[[[:digit:]]+\]: Bad protocol version identification '(SSH-2\.0_CoreLab-1\.0|[u\\"[:digit:]u]{15,30}|GET / HTTP/1.0|GET .* HTTP/1.1|[\\0-9]+|test||HELP)' from [[:digit:]\.]{6,15} port [[:digit:]]{3,5}$
 # Nmap version scan
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ sshd\[[[:digit:]]+\]: Protocol major versions differ for [[:digit:]\.]{6,15}: SSH-2\.0-OpenSSH.{10,30} vs. SSH-1.5-Nmap(-SSH-Hostkey|NSE_1.0)$
 # Allow various types of SSH keys
