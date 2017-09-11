@@ -59,7 +59,7 @@
 ^\w{3} [ :0-9]{11} [._[:alnum:]-]+ sshd\[[0-9]+\]: fatal: Unable to negotiate with [[:alnum:].:]+ port [0-9]+: no matching key exchange method found\. Their offer: (,|diffie-hellman-group-exchange-sha1|diffie-hellman-group1-sha1)+ \[preauth\]$
 ^\w{3} [ :0-9]{11} [._[:alnum:]-]+ sshd\[[0-9]+\]: fatal: Unable to negotiate with [[:alnum:].:]+ port [0-9]+: no matching cipher found\. Their offer: (,|aes256-cbc|rijndael-cbc@lysator\.liu\.se|aes192-cbc|aes128-cbc|arcfour128|arcfour|3des-cbc|none)+ \[preauth\]$
 ^\w{3} [ :0-9]{11} [._[:alnum:]-]+ sshd\[[0-9]+\]: fatal: Unable to negotiate with [[:alnum:].:]+ port [0-9]+: no matching host key type found\. Their offer: (,|ssh-dss|ecdsa-sha2-nistp(256|384|521)|ssh-ed25519)+ \[preauth\]$
-^\w{3} [ :0-9]{11} [._[:alnum:]-]+ sshd\[[0-9]+\]: fatal: packet_write_wait: Connection from [[:alnum:].:]+ port [0-9]+: Broken pipe \[preauth\]$
+^\w{3} [ :0-9]{11} [._[:alnum:]-]+ sshd\[[0-9]+\]: fatal: (ssh_dispatch_run_fatal|packet_write_wait): Connection from [[:alnum:].:]+ port [0-9]+: Broken pipe \[preauth\]$
 ^\w{3} [ :0-9]{11} [._[:alnum:]-]+ sshd\[[0-9]+\]: Received disconnect from [[:alnum:].:]+(: | port [0-9]+:)11: (disconnect|(Bye )?Bye|Closed due to user request.) \[preauth\]$
 ^\w{3} [ :0-9]{11} [._[:alnum:]-]+ sshd\[[0-9]+\]:( error:)? Received disconnect from [[:alnum:].:]+(: | port [0-9]+:)3: com\.jcraft\.jsch\.JSchException: (Auth fail|Auth cancel) \[preauth\]$
 ^\w{3} [ :0-9]{11} [._[:alnum:]-]+ sshd\[[0-9]+\]:( error:)? Received disconnect from [[:alnum:].:]+(: | port [0-9]+:)3: java\.net\.SocketTimeoutException: Read timed out \[preauth\]$
