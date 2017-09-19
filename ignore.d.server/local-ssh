@@ -64,3 +64,6 @@
 ^\w{3} [ :0-9]{11} [._[:alnum:]-]+ sshd\[[0-9]+\]:( error:)? Received disconnect from [[:alnum:].:]+(: | port [0-9]+:)3: com\.jcraft\.jsch\.JSchException: (Auth fail|Auth cancel) \[preauth\]$
 ^\w{3} [ :0-9]{11} [._[:alnum:]-]+ sshd\[[0-9]+\]:( error:)? Received disconnect from [[:alnum:].:]+(: | port [0-9]+:)3: java\.net\.SocketTimeoutException: Read timed out \[preauth\]$
 ^\w{3} [ :0-9]{11} [._[:alnum:]-]+ sshd\[[0-9]+\]: Disconnecting: Too many authentication failures( for [[:punct:][:alnum:]]+)? \[preauth\]$
+# New on 2017-09-19
+^\w{3} [ :0-9]{11} [._[:alnum:]-]+ sshd\[[0-9]+\]: Bad packet length [0-9]+\. \[preauth\]$
+^\w{3} [ :0-9]{11} [._[:alnum:]-]+ sshd\[[0-9]+\]: fatal: ssh_dispatch_run_fatal: Connection from [[:alnum:].:]+ port [0-9]+: message authentication code incorrect \[preauth\]$
