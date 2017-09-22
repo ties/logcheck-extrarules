@@ -67,3 +67,4 @@
 # New on 2017-09-19
 ^\w{3} [ :0-9]{11} [._[:alnum:]-]+ sshd\[[0-9]+\]: Bad packet length [0-9]+\. \[preauth\]$
 ^\w{3} [ :0-9]{11} [._[:alnum:]-]+ sshd\[[0-9]+\]: fatal: ssh_dispatch_run_fatal: Connection from [[:alnum:].:]+ port [0-9]+: message authentication code incorrect \[preauth\]$
+^\w{3} [ :0-9]{11} [._[:alnum:]-]+ sshd\[[0-9]+\]: fatal: mm_answer_moduli: bad parameters: 2048 2048 1024$
