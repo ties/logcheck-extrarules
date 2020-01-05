@@ -20,3 +20,4 @@
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd: pam_unix\(systemd-user:session\): session closed for user [-._[:alnum:]]+$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd\[[0-9]+\]: (snapd\.refresh|apt-daily)\.timer: Adding( [0-9]{1,2}h)?( [0-9]{1,2}min)?( [0-9]{1,2}\.[0-9]+s)?( [0-9]{1,3}\.[0-9]{3}ms)? random time\.$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd-timesyncd\[[0-9]+\]: (Timed out waiting for reply from|Synchronized to time server) [.:0-9a-f]+:123 \([._[:alnum:]-]+\)\.$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd\[[0-9]+\]: (Started|Starting) (Message of the Day\.)(\.\.)?$

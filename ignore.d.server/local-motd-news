@@ -1,0 +1,3 @@
+# 50-motd-news[13982]:  * Overheard at KubeCon: "microk8s.status just blew my mind".
+# 50-motd-news[13982]:      https://microk8s.io/docs/commands#microk8s.status
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ 50-motd-news\[[0-9]+\]:.*
