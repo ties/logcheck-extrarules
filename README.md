@@ -1,7 +1,7 @@
 logcheck-extrarules
 -------------------
 
-A set of logcheck [0] rules that are
+A set of [logcheck][0] rules that are
 opinionated and clean up my inbox.
 
 ## Contributing
@@ -10,7 +10,7 @@ This repository contains rules for a mix of Debian and Ubuntu packages and accep
 contributions for both of these.
 
 If you have rules that are applicable to a Debian stable package and that meet
-the following requirements, please consider to contribute them upstream [0] so they
+the following requirements, please consider to contribute them [upstream][0] so they
 reach more users:
 
   * Rules must be as specific as possible (i.e. no `.*` matching).
@@ -22,19 +22,19 @@ reach more users:
   * The rule request should contain example messages and an explanation why the
     messages can be ignored in general.
  
+[0]: https://salsa.debian.org/debian/logcheck
 
 ## Testing rules
 When developing a regex you probably need to test it more often than you want.
 The logcheck distribution contains the `logcheck-test` script that can be used
 to test rules.
 
-You can also use `rgxg` [1] to help generate regular expressions for numbers or
+You can also use [`rgxg`][1] to help generate regular expressions for numbers or
 to escape text.
 
-[1] https://rgxg.github.io/
-[0] https://salsa.debian.org/debian/logcheck
+[1]: https://rgxg.github.io/
 
-Example:
+#### Example:
 ```
 System Events
 =-=-=-=-=-=-=
