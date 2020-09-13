@@ -13,7 +13,7 @@
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ sshd: pam_unix\(ssh:[[:alnum:]]+\): authentication failure; logname= uid=0 euid=0 tty= ruser= rhost=[-_.:[:alnum:]]+  user=[-_.[:alnum:]]+$
 ^\w{3} [ :0-9]{11} [._[:alnum:]-]+ sshd\[[0-9]+\]: fatal: recv_rexec_state: ssh_msg_recv failed$
 ^\w{3} [ :0-9]{11} [._[:alnum:]-]+ sshd\[[0-9]+\]: Received disconnect from [[:alnum:].:]+: 11: Closed due to user request.$
-^\w{3} [ :0-9]{11} [._[:alnum:]-]+ sshd\[[0-9]+\]: (error: )?Received disconnect from [[:alnum:].:]+: 14: (No more user authentication methods available\.|Unable to connect using the available authentication methods) \[preauth\]$
+^\w{3} [ :0-9]{11} [._[:alnum:]-]+ sshd\[[0-9]+\]: (error: )?Received disconnect from [[:alnum:].:]+( port [0-9]{2,5}:|: )14: (No more user authentication methods available\.|Unable to connect using the available authentication methods) \[preauth\]$
 ^\w{3} [ :0-9]{11} [._[:alnum:]-]+ sshd\[[0-9]+\]: input_userauth_request: invalid user (\\\\|!|=|[-_.[:alnum:]])* \[preauth\]$
 ^\w{3} [ :0-9]{11} [._[:alnum:]-]+ sshd\[[0-9]+\]: fatal: Read from socket failed: Connection reset by peer \[preauth\]$
 ^\w{3} [ :0-9]{11} [._[:alnum:]-]+ sshd\[[0-9]+\]: Received disconnect from [[:alnum:].:]+: 11: Closed due to user request.$
@@ -37,29 +37,34 @@
 ^\w{3} [ :0-9]{11} [._[:alnum:]-]+ sshd\[[0-9]+\]: Received disconnect from [[:alnum:].:]+: 11: PECL/ssh2 \(http://pecl\.php\.net/packages/ssh2\) \[preauth\]$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ sshd\[[[:digit:]]+\]: Did not receive identification string from ::ffff:[\.0-9]+$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ sshd\[[[:digit:]]+\]: Disconnecting: bad client public DH value \[preauth\]$
-^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ sshd\[[[:digit:]]+\]: Disconnecting: Change of username or service not allowed: \([[:alnum:]]+,ssh-connection\) -> \([[:alnum:]]+,ssh-connection\) \[preauth\]$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ sshd\[[[:digit:]]+\]: Disconnecting: Change of username or service not allowed: \((-|[!;[:alnum:]])*,ssh-connection\) -> \((-|[!;[:alnum:]])*,ssh-conn(ecti(on\))?)? \[preauth\]$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ sshd\[[[:digit:]]+\]: invalid public DH value: <= 1 \[preauth\]$
 ^\w{3} [ :0-9]{11} [._[:alnum:]-]+ sshd\[[0-9]+\]: Received disconnect from [[:alnum:]\.:]+: 11: ok \[preauth\]$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ sshd\[[[:digit:]]+\]: Timeout, client not responding\.$
-^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ sshd\[[[:digit:]]+\]: Received disconnect from [[:digit:]\.:]+(:)? (port [0-9]+:)?11: Normal Shutdown, Thank you for playing \[preauth\]$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ sshd\[[[:digit:]]+\]: Received disconnect from [[:digit:]\.:]+(:)? (port [0-9]+:)?11: Normal Shutdown(, Thank you for playing)? \[preauth\]$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ sshd\[[[:digit:]]+\]: Received disconnect from [[:digit:]\.:]+: 13: Unable to authenticate \[preauth\]$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ sshd\[[[:digit:]]+\]: error: connect_to [._[:alnum:]-]+: unknown host \(Name or service not known\)$
-^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ sshd\[[[:digit:]]+\]: Bad protocol version identification '(GET / HTTP/1.0|GET .* HTTP/1.1|[\\0-9]+|test||HELP)' from [[:digit:]\.]{6,15} port [[:digit:]]{3,5}$
+# Bad protocol version identification '\026\003\001\001"\001' from 164.52.0.140 port 40246
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ sshd\[[[:digit:]]+\]: Bad protocol version identification '(SSH-2\.0_CoreLab-1\.0|[u\\"[:digit:]u]{15,30}|\\003|GET / HTTP/1.0|GET .* HTTP/1.1|[\\0-9]+|test||HELP)' from [[:digit:]\.]{6,15} port [[:digit:]]{3,5}$
 # Nmap version scan
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ sshd\[[[:digit:]]+\]: Protocol major versions differ for [[:digit:]\.]{6,15}: SSH-2\.0-OpenSSH.{10,30} vs. SSH-1.5-Nmap(-SSH-Hostkey|NSE_1.0)$
 # Allow various types of SSH keys
-^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ sshd\[[[:digit:]]+\]: Accepted publickey for [^[:space:]]+ from [^[:space:]]+ port [[:digit:]]+ ssh2: (ECDSA|RSA|ED25519) (SHA256:)?[+:[:alnum:]]+$
-^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ sshd\[[[:digit:]]+\]: error: maximum authentication attempts exceeded for( invalid user)? [[:punct:][:alnum:]]+ from [[:alnum:]\.:]+ port [0-9]+ ssh2 \[preauth\]$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ sshd\[[[:digit:]]+\]: Accepted publickey for [^[:space:]]+ from [^[:space:]]+ port [[:digit:]]+ ssh2: (ECDSA|RSA|ED25519) (SHA256:)?[/+:[:alnum:]]+$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ sshd\[[[:digit:]]+\]: error: maximum authentication attempts exceeded for( invalid user)? [[:punct:][:alnum:]]* from [[:alnum:]\.:]+ port [0-9]+ ssh2 \[preauth\]$
 # 16.04
 ^\w{3} [ :0-9]{11} [._[:alnum:]-]+ sshd\[[0-9]+\]: error: Received disconnect from [[:alnum:].:]+ port [0-9]+:2:\s+Handshake failed( \[preauth\])?$
 ^\w{3} [ :0-9]{11} [._[:alnum:]-]+ sshd\[[0-9]+\]: Received disconnect from [[:alnum:].:]+ port [0-9]+:11:\s+(disconnected by user|ok)?( \[preauth\])?$
-^\w{3} [ :0-9]{11} [._[:alnum:]-]+ sshd\[[0-9]+\]: error: Received disconnect from [[:alnum:].:]+(: | port [0-9]+:)13:\s+(User request)?( \[preauth\])?$
+^\w{3} [ :0-9]{11} [._[:alnum:]-]+ sshd\[[0-9]+\]: (error: )?Received disconnect from [[:alnum:].:]+(: | port [0-9]+:)13:\s+(User request)?( \[preauth\])?$
 ^\w{3} [ :0-9]{11} [._[:alnum:]-]+ sshd\[[0-9]+\]: (Connection reset by|Disconnected from) [[:alnum:].:]+ port [0-9]+(\s+\[preauth\])?$
 ^\w{3} [ :0-9]{11} [._[:alnum:]-]+ sshd\[[0-9]+\]: fatal: Unable to negotiate with [[:alnum:].:]+ port [0-9]+: no matching key exchange method found\. Their offer: (,|diffie-hellman-group-exchange-sha1|diffie-hellman-group1-sha1)+ \[preauth\]$
 ^\w{3} [ :0-9]{11} [._[:alnum:]-]+ sshd\[[0-9]+\]: fatal: Unable to negotiate with [[:alnum:].:]+ port [0-9]+: no matching cipher found\. Their offer: (,|aes256-cbc|rijndael-cbc@lysator\.liu\.se|aes192-cbc|aes128-cbc|arcfour128|arcfour|3des-cbc|none)+ \[preauth\]$
-^\w{3} [ :0-9]{11} [._[:alnum:]-]+ sshd\[[0-9]+\]: fatal: Unable to negotiate with [[:alnum:].:]+ port [0-9]+: no matching host key type found\. Their offer: (,|ssh-dss|ecdsa-sha2-nistp(384|521)|ssh-ed25519)+ \[preauth\]$
-^\w{3} [ :0-9]{11} [._[:alnum:]-]+ sshd\[[0-9]+\]: fatal: packet_write_wait: Connection from [[:alnum:].:]+ port [0-9]+: Broken pipe \[preauth\]$
+^\w{3} [ :0-9]{11} [._[:alnum:]-]+ sshd\[[0-9]+\]: fatal: Unable to negotiate with [[:alnum:].:]+ port [0-9]+: no matching host key type found\. Their offer: (,|ssh-dss|ecdsa-sha2-nistp(256|384|521)|ssh-ed25519)+ \[preauth\]$
+^\w{3} [ :0-9]{11} [._[:alnum:]-]+ sshd\[[0-9]+\]: fatal: (ssh_dispatch_run_fatal|packet_write_wait): Connection from [[:alnum:].:]+ port [0-9]+: Broken pipe \[preauth\]$
 ^\w{3} [ :0-9]{11} [._[:alnum:]-]+ sshd\[[0-9]+\]: Received disconnect from [[:alnum:].:]+(: | port [0-9]+:)11: (disconnect|(Bye )?Bye|Closed due to user request.) \[preauth\]$
 ^\w{3} [ :0-9]{11} [._[:alnum:]-]+ sshd\[[0-9]+\]:( error:)? Received disconnect from [[:alnum:].:]+(: | port [0-9]+:)3: com\.jcraft\.jsch\.JSchException: (Auth fail|Auth cancel) \[preauth\]$
 ^\w{3} [ :0-9]{11} [._[:alnum:]-]+ sshd\[[0-9]+\]:( error:)? Received disconnect from [[:alnum:].:]+(: | port [0-9]+:)3: java\.net\.SocketTimeoutException: Read timed out \[preauth\]$
 ^\w{3} [ :0-9]{11} [._[:alnum:]-]+ sshd\[[0-9]+\]: Disconnecting: Too many authentication failures( for [[:punct:][:alnum:]]+)? \[preauth\]$
+# New on 2017-09-19
+^\w{3} [ :0-9]{11} [._[:alnum:]-]+ sshd\[[0-9]+\]: Bad packet length [0-9]+\. \[preauth\]$
+^\w{3} [ :0-9]{11} [._[:alnum:]-]+ sshd\[[0-9]+\]: fatal: ssh_dispatch_run_fatal: Connection from [[:alnum:].:]+ port [0-9]+: message authentication code incorrect \[preauth\]$
+^\w{3} [ :0-9]{11} [._[:alnum:]-]+ sshd\[[0-9]+\]: fatal: mm_answer_moduli: bad parameters: 2048 2048 1024$

@@ -1,0 +1,2 @@
+^\w{3} [ :0-9]{11} [._[:alnum:]-]+ apache2\[[0-9]+\]:  \* (Starting|Stopping|Reloading) Apache httpd web server apache2$
+^\w{3} [ :0-9]{11} [._[:alnum:]-]+ apache2\[[0-9]+\]:  \*$

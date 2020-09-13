@@ -5,3 +5,8 @@
 # ext4 remounts
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ kernel: \[[\.0-9]+\] EXT4-fs \([a-zA-Z]{2,3}-[0-9]{1,2}\): re-mounted\. Opts: \(null\)$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ kernel: \[[\.0-9]+\] list passed to list_sort\(\) too long for efficiency$
+# conntrack message (caused by strange traffic on subnet)
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ kernel: \[[\.0-9]+\] conntrack: generic helper won't handle protocol (47|132)\. Please consider loading the specific helper module\.$
+# apparmor audit warnings for docker
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ kernel: \[[\.0-9]+\] audit: type=1400 audit\([\:\.0-9]+\): apparmor="DENIED" operation="ptrace" profile="docker-default" pid=[0-9]+ comm="syslog-ng" requested_mask="trace" denied_mask="trace" peer="docker-default"
+

@@ -2,18 +2,23 @@
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd-logind\[[0-9]+\]: New session [a-zA-Z]*[0-9]+ of user [._[:alnum:]-]+\.$
 # Ubuntu 16.04
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd\[[0-9]+\]: (Starting|Stopping) User Manager for UID [0-9]+\.\.\.$
-^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd\[[0-9]+\]: (Started|Stopped) User Manager for UID [0-9]+\.$
-^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd\[[0-9]+\]: Started Session [0-9]+ of user [._[:alnum:]]+\.$
-^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd\[[0-9]+\]: Starting (Daily apt activities|Cleanup of Temporary Directories)\.\.\.$
-^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd\[[0-9]+\]: Started (Cleanup of Temporary Directories|Daily apt activities|ACPI event daemon)\.$
-^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd\[[0-9]+\]: (Created|Removed) slice User Slice of [._[:alnum:]]+$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd\[[0-9]+\]: (Failed to start|Started|Stopped) User Manager for UID [0-9]+\.$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd\[[0-9]+\]: user@65534\.service: Start request repeated too quickly\.$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd\[[0-9]+\]: Started Session [0-9]+ of user [-._[:alnum:]]+\.$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd\[[0-9]+\]: Starting (Daily apt (upgrade and clean |download )?activities|Clean php session files|Cleanup of Temporary Directories)\.\.\.$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd\[[0-9]+\]: Started (Cleanup of Temporary Directories|Daily apt (upgrade and clean |download )?activities|Clean php session files|ACPI event daemon)\.$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd\[[0-9]+\]: (Created|Removed) slice User Slice of [-._[:alnum:]]+$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd\[[0-9]+\]: (Reached|Stopped) target (Default|Basic System|Paths|Timers|Sockets)\.$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd\[[0-9]+\]: (Reloading|Reloaded|Stopping|Stopped|Starting|Started) LSB: Apache2 web server\.(\.\.)?$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd\[[0-9]+\]: (Started|Stopped|Stopping|Starting) (Certbot\.|MySQL Community Server\.|LSB: Start Tomcat\.\.|LSB: QEMU Guest Agent startup script\.|LSB: QEMU KVM module loading script\.)(\.\.)?$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd\[[0-9]+\]: Startup finished in [0-9]+ms\.$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd\[[0-9]+\]: Starting Exit the Session\.\.\.$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd\[[0-9]+\]: Reached target Shutdown\.$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd\[[0-9]+\]: Reloading\.$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd\[[0-9]+\]: Received SIGRTMIN\+24 from PID [0-9]+ \(kill\)\.$
-^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd: pam_unix\(systemd-user:session\): session opened for user [._[:alnum:]]+ by \(uid=0\)$
-^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd: pam_unix\(systemd-user:session\): session closed for user [._[:alnum:]]+$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd: pam_unix\(systemd-user:session\): session opened for user [-._[:alnum:]]+ by \(uid=0\)$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd: pam_unix\(systemd-user:session\): session closed for user [-._[:alnum:]]+$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd\[[0-9]+\]: (snapd\.refresh|apt-daily)\.timer: Adding( [0-9]{1,2}h)?( [0-9]{1,2}min)?( [0-9]{1,2}\.[0-9]+s)?( [0-9]{1,3}\.[0-9]{3}ms)? random time\.$
 ^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd-timesyncd\[[0-9]+\]: (Timed out waiting for reply from|Synchronized to time server) [.:0-9a-f]+:123 \([._[:alnum:]-]+\)\.$
+^\w{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd\[[0-9]+\]: (Started|Starting) (Message of the Day\.)(\.\.)?$
+^[[:alpha:]]{3} [ :[:digit:]]{11} [._[:alnum:]-]+ systemd\[[0-9]+\]: Stopped Daily apt (download|upgrade and clean) activities\.$
